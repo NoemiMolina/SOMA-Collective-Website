@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: 'Futura Condensed';
+    src: url('./Futura Condensed.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Futura Condensed', sans-serif;
+}
