@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import somalogo from '../../assets/somalogo/logo.jpg';
-import presentation from '../../assets/images/presentation.png';
+import presentation from '../../assets/images/presentation.jpg';
 import { useNavigate } from 'react-router-dom';
 
 interface CustomCSSProperties extends React.CSSProperties {
