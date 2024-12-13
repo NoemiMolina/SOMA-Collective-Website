@@ -4,46 +4,44 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content:center;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1500px;
 }
 
 .logo {
-    width: 600px;
+    width: 700px;
     height: auto;
     margin: 20px 0;
+    justify-content: center;
 }
 
 .presentation-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 30px;
+    justify-content: center;
     margin: 40px 0;
-    width: 100%;
+    width: 150%;
 }
 
 .presentationPic {
     flex: 0 0 650px;
-    max-width: 650px;
+    max-width: 750px;
     height: auto;
     margin-right: 20px;
     padding-top: 50px;
 }
 
 .text-columns {
-    display: flex;
     flex: 1;
-    align-items: flex-start;
+    justify-content: center;
     height: 100%;
-    margin-top: -30px;
+    margin-top: 20px;
 }
 
 .text-column {
     flex: 1;
     font-family: 'Futura Condensed', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
     line-height: 1.5;
     text-align: justify;
@@ -52,7 +50,7 @@
 
 .title {
     font-family: 'Orbitron';
-    font-size: 28px;
+    font-size: 35px;
     color: black;
 }
 
@@ -63,15 +61,16 @@
 .image-container {
     margin: 30px 0;
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    gap: 30px; 
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    gap: 40px; 
+    overflow-x: auto; 
 }
 
 .card {
     position: relative;
-    width: 250px;
-    height: 400px;
+    width: 300px; 
+    height: 400px; 
     perspective: 1000px;
     transform-style: preserve-3d; 
     transition: transform 0.3s ease-in-out;
@@ -105,7 +104,7 @@
     transform: rotateY(180deg);
     backface-visibility: hidden; 
     padding: 10px;
-    font-size: 20px;
+    font-size: 21px;
 }
 
 .card-back::after {
@@ -128,4 +127,8 @@
 
 .card:hover .card-back {
     transform: rotateY(0deg); 
+}
+
+.card:hover .card-back::after {
+    opacity: 0.3; 
 }

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { FiMenu } from "react-icons/fi";
-import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import './Header.css';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isExhibitionsTabOpen, setIsExhibitionTabOpen] = useState(false);
+    const [isArtistsDropdownOpen, setIsArtistsDropdownOpen] = useState(false);
     const navigate = useNavigate();
 
     const toggleMenu = () => {
@@ -26,25 +25,33 @@ const Header = () => {
             {isMenuOpen && (
                 <div className="menu-list">
                     <div className="menu-item" onClick={() => handleNavigation('/')}>
-                        Home <IoIosArrowForward style={{ fontSize: '14px' }} />
+                        Home
                     </div>
-                    <div className="menu-item" onClick={() => handleNavigation('/Polygon')}>
-                        Polygon1993 <IoIosArrowForward style={{ fontSize: '14px' }} />
+                    <div 
+                        className="menu-item"
+                        onMouseEnter={() => setIsArtistsDropdownOpen(true)} 
+                        onMouseLeave={() => setIsArtistsDropdownOpen(false)}
+                    >
+                        Artists
                     </div>
-                    <div className="menu-item" onClick={() => handleNavigation('/LouisDazy')}>
-                        Louis Dazy <IoIosArrowForward style={{ fontSize: '14px' }} />
-                    </div>
-                    <div className="menu-item" onClick={() => handleNavigation('/Oelhantv')}>
-                        Oelhan <IoIosArrowForward style={{ fontSize: '14px' }} />
-                    </div>
-                    <div className="menu-item" onClick={() => handleNavigation('/Lightonart')}>
-                        Lighton <IoIosArrowForward style={{ fontSize: '14px' }} />
-                    </div>
-                    <div className="menu-item" onClick={() => handleNavigation('/Lukaswork')}>
-                        Lukas <IoIosArrowForward style={{ fontSize: '14px' }} />
+                    {/* Dropdown pour les artistes */}
+                    <div 
+                        className={`artists-names ${isArtistsDropdownOpen ? 'visible' : ''}`}
+                        onMouseEnter={() => setIsArtistsDropdownOpen(true)} // Reste ouvert si la souris est sur le dropdown
+                        onMouseLeave={() => setIsArtistsDropdownOpen(false)} // Ferme le dropdown quand la souris quitte
+                    >
+                        {isArtistsDropdownOpen && (
+                            <div className="sub-menu-list">
+                                <div className="sub-menu-item" onClick={() => handleNavigation('/Polygon')}>Polygon1993</div>
+                                <div className="sub-menu-item" onClick={() => handleNavigation('/LouisDazy')}>Louis Dazy</div>
+                                <div className="sub-menu-item" onClick={() => handleNavigation('/Oelhantv')}>Oelhan</div>
+                                <div className="sub-menu-item" onClick={() => handleNavigation('/Lightonart')}>Lighton</div>
+                                <div className="sub-menu-item" onClick={() => handleNavigation('/Lukaswork')}>Lukas</div>
+                            </div>
+                        )}
                     </div>
                     <div className="menu-item" onClick={() => handleNavigation('/Exhibitions')}>
-                       Events & Exhibitions<IoIosArrowForward style={{ fontSize: '14px' }} />
+                        Events & Exhibitions
                     </div>
                 </div>
             )}

@@ -4,22 +4,36 @@
     align-items: flex-start;
     width: 100%;
     height: 100%;
-    margin-top: 10px;
+    box-sizing: border-box;
 }
 
-.text-section {
-    width: 50%;
-    padding: 20px;
+.container {
+    width: 45%;
     box-sizing: border-box;
     text-align: left;
+    margin-left: 0;
+}
+
+.img-container {
+    width: 50%;
+    position: relative;
 }
 
 .gif-right-large {
     width: 100%;
-    max-width: 850px; 
+    max-width: 850px;
     height: auto;
     object-fit: contain;
-    margin-top: -90px; 
+    margin: 0 auto;
+    display: block;
+}
+
+.gif-caption {
+    font-family: 'Futura Condensed', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .title {
@@ -54,7 +68,14 @@
     font-family: 'Futura Condensed', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    font-size: 30px;
+    margin: 0 20px;
+    color: inherit;
+    text-decoration: none;
 }
 
 .content {
@@ -65,7 +86,7 @@
 
 .polygonpresentation {
     font-family: 'Futura Condensed', sans-serif;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 2;
     color: black;
     text-align: justify;

@@ -13,6 +13,18 @@ const Home = () => {
 
     const presentationImages = [
         {
+            src: require('../../assets/images/LukasImgs/BigStar.jpg'),
+            title: 'Big Star',
+            artist: 'Lukas',
+            route: '/Lukaswork',
+        },
+        {
+            src: require('../../assets/images/LightonImgs/Lightonpresentation.gif'),
+            title: 'At this moment, Nothing else matter',
+            artist: 'Lighton',
+            route: '/Lightonart',
+        },
+        {
             src: require('../../assets/images/LouisDazyImgs/Eva.jpg'),
             title: 'Eva',
             artist: 'Louis Dazy',
@@ -117,7 +129,7 @@ const Home = () => {
                         onClick={() => navigate(img.route)}
                         style={{
                             '--image-url': `url(${img.src})`,
-                        } as CustomCSSProperties} // Type explicite ici
+                        } as CustomCSSProperties} 
                     >
                         <img
                             src={img.src}
