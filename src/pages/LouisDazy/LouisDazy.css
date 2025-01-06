@@ -1,28 +1,69 @@
-.gif-left-large {
-    position: relative;
-    top: 50px; 
-    width: 300px; 
-    max-width: 40%; 
-    height: auto; 
-    object-fit: contain;
-    z-index: 10; 
-    margin: 150px auto; 
+.louisDazy-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 45%;
+    box-sizing: border-box;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.presentation-img-container {
+    width: 50%;
     position: relative;
-    margin-left: 420px; 
+}
+
+.img-container {
+    position: absolute;
+    bottom: 0;
+    left: 20px; 
+    display: flex;
+    gap: 70px;
+    margin-bottom: -570px;
+}
+
+.img-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.art-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.gif-right-large {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    display: flex;
+    margin-right: 380px;
+    padding-top: 70px;
+}
+
+.art-caption {
+    font-family: 'Futura Condensed', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .title {
     font-family: 'Orbitron';
     font-size: 35px;
     color: black;
-    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -39,6 +80,7 @@
     width: 350px;
     margin: 0 auto;
     display: block;
+    align-items: center;
 }
 
 .socials {
@@ -50,20 +92,28 @@
     font-family: 'Futura Condensed', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
+
+.social-icon {
+    font-size: 30px;
+    margin: 0 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
 
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.louisdazypresentation {
+.louisDazyPresentation{
     font-family: 'Futura Condensed', sans-serif;
     font-size: 25px;
-    line-height: 1.5;
+    line-height: 2;
     color: black;
     text-align: justify;
-    margin: 0; 
+    margin-left: 10px
 }

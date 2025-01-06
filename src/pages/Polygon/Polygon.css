@@ -14,9 +14,31 @@
     margin-left: 0;
 }
 
-.img-container {
+.presentation-img-container {
     width: 50%;
     position: relative;
+}
+
+.img-container {
+    position: absolute;
+    bottom: 0;
+    left: 20px; 
+    display: flex;
+    gap: 70px;
+    margin-bottom: -530px;
+}
+
+.img-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.art-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
 .gif-right-large {
@@ -25,10 +47,12 @@
     height: auto;
     object-fit: contain;
     margin: 0 auto;
-    display: block;
+    display: flex;
+    margin-right: 380px;
+    padding-top: 70px;
 }
 
-.gif-caption {
+.art-caption {
     font-family: 'Futura Condensed', sans-serif;
     font-size: 20px;
     color: black;
@@ -84,9 +108,9 @@
     align-items: flex-start;
 }
 
-.polygonpresentation {
+.polygonPresentation {
     font-family: 'Futura Condensed', sans-serif;
-    font-size: 22px;
+    font-size: 25px;
     line-height: 2;
     color: black;
     text-align: justify;

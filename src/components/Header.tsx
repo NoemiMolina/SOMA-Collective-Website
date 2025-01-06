@@ -34,11 +34,10 @@ const Header = () => {
                     >
                         Artists
                     </div>
-                    {/* Dropdown pour les artistes */}
                     <div 
                         className={`artists-names ${isArtistsDropdownOpen ? 'visible' : ''}`}
-                        onMouseEnter={() => setIsArtistsDropdownOpen(true)} // Reste ouvert si la souris est sur le dropdown
-                        onMouseLeave={() => setIsArtistsDropdownOpen(false)} // Ferme le dropdown quand la souris quitte
+                        onMouseEnter={() => setIsArtistsDropdownOpen(true)} 
+                        onMouseLeave={() => setIsArtistsDropdownOpen(false)} 
                     >
                         {isArtistsDropdownOpen && (
                             <div className="sub-menu-list">

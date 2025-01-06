@@ -3,7 +3,10 @@ import { SlSocialInstagram } from "react-icons/sl";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdMailOutline } from "react-icons/md";
 import polygonImage from '../../assets/images/PolygonImgs/polygonpic.jpg';
-import innerColourGif from '../../assets/images/PolygonImgs/innercolour.gif';
+import InnerColours from '../../assets/images/PolygonImgs/innercolour.gif';
+import Impala from '../../assets/images/PolygonImgs/Impala.jpg';
+import CathodeRayFusion from '../../assets/images/PolygonImgs/CathodeRayFusion.gif';
+import Azure from '../../assets/images/PolygonImgs/Azure.gif';
 import './Polygon.css';
 
 const PolygonTab = () => {
@@ -28,7 +31,7 @@ const PolygonTab = () => {
                     </a>
                 </div>
                 <div className="content">
-                    <p className="polygonpresentation">
+                    <p className="polygonPresentation">
                         When imperfection acts as a diving force for art and analog technology stands alongside digital evolution, the past, present, and future are one!
                         POLYGON1993 brings us into a glitch universe that represents his daily life: a distorted world where reality and imagination mingle.
                         <br />
@@ -38,9 +41,23 @@ const PolygonTab = () => {
                     </p>
                 </div>
             </div>
+            <div className="presentation-img-container">
+                    <img src={CathodeRayFusion} alt="Cathode Ray Fusion gif" className="gif-right-large" />
+                    <p className="art-caption">'Cathode Ray Fusion' feat Oelhan</p>
+                </div>
             <div className="img-container">
-                <img src={innerColourGif} alt="Inner Colour Animation" className="gif-right-large" />
-                <p className="gif-caption">'Inner Colour'</p>
+                <div className="img-item">
+                    <img src={Impala} alt="Impala img" className="art-image" />
+                    <p className="art-caption">'Impala'</p>
+                </div>
+                <div className="img-item">
+                    <img src={InnerColours} alt="Inner Colour gif" className="art-image" />
+                    <p className="art-caption">'Inner Colours'</p>
+                </div>
+                <div className="img-item">
+                    <img src={Azure} alt="Azure gif" className="art-image" />
+                    <p className="art-caption">'Azure'</p>
+                </div>
             </div>
         </div>
     )

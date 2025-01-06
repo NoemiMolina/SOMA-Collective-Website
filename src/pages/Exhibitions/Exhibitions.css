@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=VT323&display=swap");
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.text-columns {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.text-column {
+    font-family: 'Futura Condensed', sans-serif;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0 10px;
+}
+
+.inline-cards-right {
+    position: absolute;
+    top: 0;
+    right: -300px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 95px;
+
+}
+
+.presentation-img-container {
+    width: 50%;
+    position: relative;
+}
+
+.img-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.art-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; 
+    margin: 0 auto; 
+    padding: 0 40px; 
+    max-width: 1200px; 
+    margin-top: 30px;
+    gap: 10px;
+    margin-left: 120px;
+    align-items: center;
+}
+
+
