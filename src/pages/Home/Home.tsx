@@ -19,31 +19,43 @@ const Home = () => {
             route: '/Lukaswork',
         },
         {
-            src: require('../../assets/images/LightonImgs/Lightonpresentation.gif'),
+            src: require('../../assets/images/LightonImgs/NothingElseMatter.gif'),
             title: 'At this moment, Nothing else matter',
             artist: 'Lighton',
             route: '/Lightonart',
         },
         {
-            src: require('../../assets/images/LouisDazyImgs/Eva.jpg'),
-            title: 'Eva',
-            artist: 'Louis Dazy',
-            route: '/LouisDazy',
-        },
-        {
-            src: require('../../assets/images/OelhanImgs/Sailor.gif'),
-            title: 'Sailor',
+            src: require('../../assets/images/OelhanImgs/InnerDemonTrustMe.gif'),
+            title: 'Inner Demon Trust Me',
             artist: 'Oelhan',
             route: '/Oelhantv',
-            
         },
         {
             src: require('../../assets/images/PolygonImgs/Zaora.jpg'),
             title: 'Zaora',
             artist: 'Polygon1993',
             route: '/Polygon',
-        }
-     
+        },
+        {
+            src: require('../../assets/images/OelhanImgs/Sailor.gif'),
+            title: 'Sailor',
+            artist: 'Oelhan',
+            route: '/Oelhantv',
+        },
+        {
+            src: require('../../assets/images/LouisDazyImgs/Blindsided.jpg'),
+            title: 'Blindsided',
+            artist: 'Louis Dazy',
+            route: '/LouisDazy',
+        },
+        {
+            src: require('../../assets/images/LightonImgs/Illumination.gif'),
+            title: 'Illumination',
+            artist: 'Lighton',
+            route: '/Lightonart',
+        },
+
+
     ];
 
     return (
@@ -85,8 +97,6 @@ const Home = () => {
                             presence of the artist's hand, while digital
                             creations challenge the limits of the possible.
                         </p>
-                    </div>
-                    <div className="text-column">
                         <p>
                             As we embark on this global journey, we aim to
                             offer audiences a unique experience that transcends
@@ -100,17 +110,6 @@ const Home = () => {
                             of ideas and perspectives.
                         </p>
                         <p>
-                            With every physical and digital artwork, we share,
-                            we aim to connect people on a deeper level, to
-                            engage in a global conversation about the evolving
-                            role of art in the 21st century. Our desire is to
-                            break down barriers, to unite people across
-                            continents and backgrounds, and to inspire a new
-                            generation of artists and art enthusiasts who
-                            understand that art has the power to transcend
-                            boundaries and create a more interconnected world.
-                        </p>
-                        <p>
                             As SOMA Collective continues to push the boundaries
                             of what is possible in the intersection of physical
                             and digital art, we invite you to join us on this
@@ -118,18 +117,56 @@ const Home = () => {
                             world where creativity knows no bounds, and where
                             art serves as a bridge that unites us all.
                         </p>
+                        <div className="inline-cards-right">
+                            <div
+                                className="card"
+                                onClick={() => navigate(presentationImages[0].route)}
+                                style={{
+                                    '--image-url': `url(${presentationImages[0].src})`,
+                                } as CustomCSSProperties}
+                            >
+                                <img
+                                    src={presentationImages[0].src}
+                                    alt={presentationImages[0].title}
+                                    className="eva-image"
+                                />
+                                <div className="card-back">
+                                    <p>{`'${presentationImages[0].title}' by ${presentationImages[0].artist}`}</p>
+                                </div>
+                            </div>
+                            <div
+                                className="card"
+                                onClick={() => navigate(presentationImages[1].route)}
+                                style={{
+                                    '--image-url': `url(${presentationImages[1].src})`,
+                                } as CustomCSSProperties}
+                            >
+                                <img
+                                    src={presentationImages[1].src}
+                                    alt={presentationImages[1].title}
+                                    className="eva-image"
+                                />
+                                <div className="card-back">
+                                    <p>{`'${presentationImages[1].title}' by ${presentationImages[1].artist}`}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            In a world where the boundaries between the
+                            tangible and the virtual continue to blur, SOMA
+                            Collective embraces this transformation as an
+                            opportunity for exploration.
+                        </p>
                     </div>
                 </div>
             </div>
             <div className="image-container">
-                {presentationImages.map((img, index) => (
+                {presentationImages.slice(2).map((img, index) => (
                     <div
                         className="card"
                         key={index}
                         onClick={() => navigate(img.route)}
-                        style={{
-                            '--image-url': `url(${img.src})`,
-                        } as CustomCSSProperties} 
+                        style={{ '--image-url': `url(${img.src})` } as CustomCSSProperties}
                     >
                         <img
                             src={img.src}
