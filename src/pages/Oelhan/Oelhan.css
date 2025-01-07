@@ -1,68 +1,118 @@
-.gif-left-large {
-    position: relative;
-    top: 50px; 
-    width: 300px; 
-    max-width: 40%; 
-    height: auto; 
-    object-fit: contain;
-    z-index: 10; 
-    margin: 150px auto; 
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+.oelhan-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
     padding: 20px;
-    position: relative;
-    margin-left: 420px; 
 }
 
 .title {
-    font-family: 'Orbitron';
-    font-size: 35px;
-    color: black;
     text-align: center;
-    margin-bottom: 10px;
-}
-
-.animator {
-    font-family: 'Orbitron';
-    font-size: 30px;
-    color: black;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
 }
 
 .oelhan-image {
-    width: 350px;
+    max-width: 50%; 
+    height: auto;    
+    display: block;  
     margin: 0 auto;
+}
+
+.animator {
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 30px;
+    color: black;
+    text-align: center; 
+    margin: 10px auto; 
+    font-weight: bold;
     display: block;
 }
 
-.socials {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.socials p {
-    font-family: 'Futura Condensed', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.content {
+.artist-presentation {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    margin-left: 25px;
 }
 
-.oelhanpresentation {
+.oelhanPresentation {
+    font-family: 'Futura Condensed', sans-serif;
+    font-size: 33px;
+    line-height: 2;
+    color: black;
+}
+
+.left-section {
+    flex: 1;
+    max-width: 30%;
+    margin-right: 20px;
+}
+
+.right-section {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 90px;
+}
+
+.large-image-container {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.large-image {
+    width: 100%;
+    height: auto;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 18%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.art-caption {
     font-family: 'Futura Condensed', sans-serif;
     font-size: 25px;
-    line-height: 1.5;
     color: black;
-    text-align: justify;
-    margin: 0; 
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .artist-presentation {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .large-image-container {
+        width: 100%;
+    }
+
+    .gallery-item {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 1 1 100%;
+    }
 }
