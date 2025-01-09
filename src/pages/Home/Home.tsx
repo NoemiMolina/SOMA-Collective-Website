@@ -54,113 +54,91 @@ const Home = () => {
             artist: 'Lighton',
             route: '/Lightonart',
         },
-
-
     ];
 
     return (
-        <div className="container">
+        <div className="home-layout">
             <img src={somalogo} alt="Logo" className="logo" />
             <div className="presentation-container">
-                <img
-                    src={presentation}
-                    alt="Presentation pic"
-                    className="presentationPic"
-                />
+                <img src={presentation} alt="Presentation" className="presentation-image" />
                 <div className="text-columns">
                     <div className="text-column">
-                        <h1 className="title">What's behind Soma ?</h1>
-                        <p>
-                            SOMA Collective stands as a testament to the
-                            boundless power of art to transcend borders, unite
-                            diverse cultures, and connect people through a
-                            shared creative experience. Our collective mission
-                            is to bridge the realms of the physical and the
-                            digital, weaving together a tapestry of artistic
-                            expression that blurs traditional boundaries. Our
-                            passion lies in creating exhibitions worldwide that
-                            blend physical and digital artworks, crafting truly
-                            unique events that resonate across the globe.
-                        </p>
-                        <p>
-                            In a world where the boundaries between the
-                            tangible and the virtual continue to blur, SOMA
-                            Collective embraces this transformation as an
-                            opportunity for exploration. We believe that the
-                            fusion of the physical and the digital is not a
-                            mere convergence of mediums; it is the birth of a
-                            new dimension of artistic expression. Our
-                            exhibitions, which showcase a harmonious marriage
-                            of diverse mediums, invite audiences to explore the
-                            intersections of these worlds. Through each
-                            physical artwork, visitors can feel the tangible
-                            presence of the artist's hand, while digital
-                            creations challenge the limits of the possible.
-                        </p>
-                        <p>
-                            As we embark on this global journey, we aim to
-                            offer audiences a unique experience that transcends
-                            geographic borders. By presenting our exhibitions
-                            worldwide, we enable people from diverse cultures
-                            to immerse themselves in the profound beauty and
-                            thought-provoking nature of our collective's
-                            creations. We believe that art is a universal
-                            language, and through our exhibitions, we seek to
-                            foster a global dialogue, encouraging the exchange
-                            of ideas and perspectives.
-                        </p>
-                        <p>
-                            As SOMA Collective continues to push the boundaries
-                            of what is possible in the intersection of physical
-                            and digital art, we invite you to join us on this
-                            global artistic journey. Together, we can build a
-                            world where creativity knows no bounds, and where
-                            art serves as a bridge that unites us all.
-                        </p>
-                        <div className="inline-cards-right">
-                            <div
-                                className="card"
-                                onClick={() => navigate(presentationImages[0].route)}
-                                style={{
-                                    '--image-url': `url(${presentationImages[0].src})`,
-                                } as CustomCSSProperties}
-                            >
-                                <img
-                                    src={presentationImages[0].src}
-                                    alt={presentationImages[0].title}
-                                    className="eva-image"
-                                />
-                                <div className="card-back">
-                                    <p>{`'${presentationImages[0].title}' by ${presentationImages[0].artist}`}</p>
-                                </div>
-                            </div>
-                            <div
-                                className="card"
-                                onClick={() => navigate(presentationImages[1].route)}
-                                style={{
-                                    '--image-url': `url(${presentationImages[1].src})`,
-                                } as CustomCSSProperties}
-                            >
-                                <img
-                                    src={presentationImages[1].src}
-                                    alt={presentationImages[1].title}
-                                    className="eva-image"
-                                />
-                                <div className="card-back">
-                                    <p>{`'${presentationImages[1].title}' by ${presentationImages[1].artist}`}</p>
-                                </div>
+                        <h1 className="title">What's behind Soma?</h1>
+                        <div className="description">
+                            <p>
+                                SOMA Collective stands as a testament to the
+                                boundless power of art to transcend borders, unite
+                                diverse cultures, and connect people through a
+                                shared creative experience.
+                                <br />
+                                Our collective mission
+                                is to bridge the realms of the physical and the
+                                digital, weaving together a tapestry of artistic
+                                expression that blurs traditional boundaries. Our
+                                passion lies in creating exhibitions worldwide that
+                                blend physical and digital artworks, crafting truly
+                                unique events that resonate across the globe.
+                                <br />
+                                In a world where the boundaries between the
+                                tangible and the virtual continue to blur, SOMA
+                                Collective embraces this transformation as an
+                                opportunity for exploration. We believe that the
+                                fusion of the physical and the digital is not a
+                                mere convergence of mediums; it is the birth of a
+                                new dimension of artistic expression. Our
+                                exhibitions, which showcase a harmonious marriage
+                                of diverse mediums, invite audiences to explore the
+                                intersections of these worlds.
+                                <br />
+                                Through each physical artwork, visitors can feel the tangible
+                                presence of the artist's hand, while digital
+                                creations challenge the limits of the possible.
+                                <br />
+                                As we embark on this global journey, we aim to
+                                offer audiences a unique experience that transcends
+                                geographic borders. By presenting our exhibitions
+                                worldwide, we enable people from diverse cultures
+                                to immerse themselves in the profound beauty and
+                                thought-provoking nature of our collective's
+                                creations.
+                                <br />
+                                We believe that art is a universal
+                                language, and through our exhibitions, we seek to
+                                foster a global dialogue, encouraging the exchange
+                                of ideas and perspectives.
+                                <br />
+                                As SOMA Collective continues to push the boundaries
+                                of what is possible in the intersection of physical
+                                and digital art, we invite you to join us on this
+                                global artistic journey. Together, we can build a
+                                world where creativity knows no bounds, and where
+                                art serves as a bridge that unites us all.
+                                <br />
+                                In a world where the boundaries between the tangible and the virtual continue to blur, SOMA Collective embraces this transformation as an opportunity for exploration.
+                            </p>
+                        </div>
+                        <div className="right-section">
+                            <div className='large-image-container'>
+                                {presentationImages.slice(0, 2).map((img, index) => (
+                                    <div
+                                        className="large-card"
+                                        key={index}
+                                        onClick={() => navigate(img.route)}
+                                        style={{ '--image-url': `url(${img.src})` } as CustomCSSProperties}
+                                    >
+                                        <img src={img.src} alt={img.title} className="large-eva-image" />
+                                        <div className="large-card-back">
+                                            <p>{`'${img.title}' by ${img.artist}`}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                        <p>
-                            In a world where the boundaries between the
-                            tangible and the virtual continue to blur, SOMA
-                            Collective embraces this transformation as an
-                            opportunity for exploration.
-                        </p>
+
                     </div>
                 </div>
             </div>
-            <div className="image-container">
+            <div className="image-gallery">
                 {presentationImages.slice(2).map((img, index) => (
                     <div
                         className="card"
@@ -168,11 +146,7 @@ const Home = () => {
                         onClick={() => navigate(img.route)}
                         style={{ '--image-url': `url(${img.src})` } as CustomCSSProperties}
                     >
-                        <img
-                            src={img.src}
-                            alt={img.title}
-                            className="eva-image"
-                        />
+                        <img src={img.src} alt={img.title} className="eva-image" />
                         <div className="card-back">
                             <p>{`'${img.title}' by ${img.artist}`}</p>
                         </div>
