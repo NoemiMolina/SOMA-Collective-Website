@@ -6,7 +6,7 @@ import lukasImage from '../../assets/images/LukasImgs/lukaspic.jpg';
 import Combo from '../../assets/images/LukasImgs/Combo.jpg';
 import Opty from '../../assets/images/LukasImgs/Opty.jpg';
 import UtopicCity from '../../assets/images/LukasImgs/UtopicCity.jpg';
-import Vanite from '../../assets/images/LukasImgs/Vanite.mp4';
+// import Vanite from '../../assets/images/LukasImgs/Vanite.mp4';
 import Hypnoz from '../../assets/images/LukasImgs/Hypnoz.gif';
 import RonArad from '../../assets/images/LukasImgs/RonArad.jpg';
 import './Lukas.css';
@@ -49,12 +49,12 @@ const OelhanTab = () => {
                         </video>
                         <p className="art-caption">" Hypnoz "</p>
                     </div>
-                    <div className="large-image-container">
+                    {/* <div className="large-image-container">
                         <video controls width="950">
                             <source src={Vanite} type="video/mp4" className="large-image" />
                         </video>
                         <p className="art-caption">" Vanité "</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="image-gallery">
