@@ -1,52 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=VT323&display=swap");
 
 .home-layout {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .logo {
-    width: 700px;
-    height: auto;
-    margin: 0 auto;
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .presentation-container {
-    display: flex;
-    margin: 40px 0;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  margin: 40px 0;
+  width: 100%;
+  justify-content: space-between;
 }
 
 /*-----------LEFT---------------------*/
 
 .presentation-image {
-    flex: 0 0 40%;
-    max-width: 750px;
-    height: auto;
-    margin-right: 20px;
-    padding-top: 50px;
+  flex: 0 0 40%;
+  max-width: 750px;
+  height: auto;
+  margin-right: 20px;
+  padding-top: 50px;
 }
 
 /*---------------------MIDDLE------------------*/
 
 .text-columns {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    margin-bottom: 40px;
-    flex: 1; /* This will allow it to take the remaining space */
-    padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  margin-bottom: 40px;
+  flex: 1; /* This will allow it to take the remaining space */
+  padding: 0 20px;
 }
 
 .text-column {
-    font-family: 'Futura Condensed', sans-serif;
-    font-size: 33px;
-    line-height: 2;
-    color: black;
+  font-family: "Futura Condensed", sans-serif;
+  font-size: 33px;
+  line-height: 2;
+  color: black;
 }
 
 /* .inline-cards {
@@ -59,16 +59,15 @@
 /*----------RIGHT------------------*/
 
 .right-section {
-    flex: 0 0 30%; /* Adjusted to take up 30% of the available width */
-    display: flex;
-    flex-direction: column; /* Aligns images vertically */
-    justify-content: space-between; /* Space between images */
+  flex: 0 0 30%; /* Adjusted to take up 30% of the available width */
+  display: flex;
+  flex-direction: column; /* Aligns images vertically */
+  justify-content: space-between; /* Space between images */
 }
 
 .large-image-container {
-    width: 45%;
-    margin-bottom: 200px;
-    
+  width: 45%;
+  margin-bottom: 200px;
 }
 
 /* .large-image {
@@ -77,162 +76,161 @@
 } */
 
 .large-card {
-    flex: 1;
-    min-width: 200px;
-    max-width: 250px;
-    height: 300px;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  height: 300px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .large-card:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .large-eva-image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-    transition: transform 0.6s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform 0.6s ease-in-out;
 }
 
 .large-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    font-family: 'Futura Condensed', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    padding: 10px;
-    font-size: 18px;
-    line-height: 1.2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "Futura Condensed", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 .large-card-back::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: var(--image-url);
-    background-size: cover;
-    background-position: center;
-    transform: rotateY(180deg);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--image-url);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+  z-index: -1;
 }
 
 .large-card:hover .large-eva-image {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .large-card:hover .large-card-back {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .large-card:hover .large-card-back::after {
-    opacity: 0.3;
+  opacity: 0.3;
 }
-
 
 /*-----------------GALLERY------------------*/
 
 .card {
-    flex: 1;
-    min-width: 200px;
-    max-width: 250px;
-    height: 300px;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  height: 300px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .eva-image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-    transition: transform 0.6s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform 0.6s ease-in-out;
 }
 
 .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    font-family: 'Futura Condensed', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    padding: 10px;
-    font-size: 18px;
-    line-height: 1.2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "Futura Condensed", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 .card-back::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: var(--image-url);
-    background-size: cover;
-    background-position: center;
-    transform: rotateY(180deg);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--image-url);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+  z-index: -1;
 }
 
 .card:hover .eva-image {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .card:hover .card-back {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .card:hover .card-back::after {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
 /*----------RIGHT------------------*/
 
 .right-section {
-    flex: 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .large-image-container {
-    width: 45%;
-    margin-bottom: 20px;
+  width: 45%;
+  margin-bottom: 20px;
 }
 
 /* .large-image {
@@ -241,85 +239,144 @@
 } */
 
 .large-card {
-    flex: 1;
-    min-width: 200px;
-    max-width: 250px;
-    height: 300px;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  height: 300px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .large-card:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .large-eva-image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-    transition: transform 0.6s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform 0.6s ease-in-out;
 }
 
 .large-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    font-family: 'Futura Condensed', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    padding: 10px;
-    font-size: 18px;
-    line-height: 1.2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "Futura Condensed", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 .large-card-back::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: var(--image-url);
-    background-size: cover;
-    background-position: center;
-    transform: rotateY(180deg);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--image-url);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+  z-index: -1;
 }
 
 .large-card:hover .large-eva-image {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .large-card:hover .large-card-back {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .large-card:hover .large-card-back::after {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 /*------------------------------------*/
 
 .image-gallery {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 0 40px;
-    max-width: 1200px;
-    margin-top: 30px;
-    gap: 10px;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: 1200px;
+  margin-top: 30px;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*TOM PART COPY FROM LOUIDAZY*/
+.louisDazy-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* padding: 15rem; */
+}
+
+.louisDazy-container__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+}
+
+.louisDazy-container__section__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  font-family: "Futura Condensed", sans-serif;
+  font-size: 33px;
+  color: black;
+}
+
+.louisDazy-container__section__item img {
+  width: 100%;
+  height: auto;
+}
+
+.section--logo {
+  height: 10vh;
+  .louisDazy-container__section__item {
+    height: 10vh;
+    object-fit: contain;
+    img {
+      height: 10vh;
+    }
+  }
+}
+
+.section--presentation {
+  height: 90vh;
+  position: relative;
+  .louisDazy-container__section__item {
+    height: 100%;
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+    .img-test {
+      height: 50%;
+      object-fit: contain;
+    }
+  }
 }
