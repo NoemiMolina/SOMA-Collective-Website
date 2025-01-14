@@ -4,10 +4,6 @@ import somalogo from '../../assets/somalogo/logo.svg';
 import { useNavigate } from 'react-router-dom';
 import SurpriseReset from '../../assets/images/LightonImgs/SurpriseReset.gif'
 
-interface CustomCSSProperties extends React.CSSProperties {
-    '--image-url'?: string;
-}
-
 const Home = () => {
     const navigate = useNavigate();
 
@@ -77,12 +73,10 @@ const Home = () => {
             </div>
             <div className="louisDazy-container__section">
                 {images.slice(0, 1).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
-                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
-                            <p>{`'${image.title}' by ${image.artist}`}</p>
+                            <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
                         </div>
-                    </div>
                 ))}
                 <div className="louisDazy-container__section__item">
                     <h1 className="title">What's behind Soma?</h1>
@@ -139,22 +133,19 @@ const Home = () => {
                     </p>
                 </div>
                 {images.slice(1, 2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
-                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
-                            <p>{`'${image.title}' by ${image.artist}`}</p>
-                        </div>
+                            <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
                     </div>
                 ))}
             </div>
             <div className="louisDazy-container__section">
                 {images.slice(2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
-                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
-                            <p>{`'${image.title}' by ${image.artist}`}</p>
+                            <p className='art-caption'>{`'${image.title}' by ${image.artist}`}</p>
                         </div>
-                    </div>
+              
                 ))}
             </div>
         </div>
