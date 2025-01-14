@@ -1,117 +1,150 @@
-.polygon-layout {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=VT323&display=swap");
+
+.louisDazy-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.container {
-    width: 45%;
-    box-sizing: border-box;
-    text-align: left;
-    margin-left: 0;
-}
-
-.presentation-img-container {
-    width: 50%;
-    position: relative;
-}
-
-.img-container {
-    position: absolute;
-    bottom: 0;
-    left: 20px; 
-    display: flex;
-    gap: 70px;
-    margin-bottom: -530px;
-}
-
-.img-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-}
-
-.art-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-}
-
-.gif-right-large {
-    width: 100%;
-    max-width: 850px;
-    height: auto;
-    object-fit: contain;
-    margin: 0 auto;
-    display: flex;
-    margin-right: 380px;
-    padding-top: 70px;
-}
-
-.art-caption {
-    font-family: 'Futura Condensed', sans-serif;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.title {
-    font-family: 'Orbitron';
-    font-size: 35px;
-    color: black;
-    margin-bottom: 10px;
-}
-
-.glitcher {
-    font-family: 'Orbitron';
-    font-size: 30px;
-    color: black;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
+.louisDazy-container__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
 }
 
 .polygon-image {
-    width: 350px;
-    margin: 0 auto;
-    display: block;
-    align-items: center;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.socials {
-    text-align: center;
-    margin-bottom: 25px;
+.louisDazy-container__section__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  font-family: "Futura Condensed", sans-serif;
+  font-size: 33px;
+  color: black;
 }
 
-.socials p {
-    font-family: 'Futura Condensed', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.louisDazy-container__section__item img {
+  width: 100%;
+  height: auto;
 }
 
-.social-icon {
-    font-size: 30px;
-    margin: 0 20px;
-    color: inherit;
-    text-decoration: none;
+.section--logo {
+  height: 15vh;
+  .louisDazy-container__section__item {
+    height: 10vh;
+    object-fit: contain;
+    img {
+      height: 10vh;
+    }
+  }
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.section--presentation {
+  height: 90vh;
+  position: relative;
+  .louisDazy-container__section__item {
+    height: 100%;
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 }
 
-.polygonPresentation {
-    font-family: 'Futura Condensed', sans-serif;
-    font-size: 25px;
-    line-height: 2;
-    color: black;
-    text-align: justify;
+.section--animPic {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.section--animPic:hover {
+  transform: translateY(-10px);
+}
+
+.section--animPic img {
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+.section--animPic::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 10px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.section--animPic:hover img {
+  transform: rotateY(180deg);
+}
+
+.section--animPic:hover::after {
+  transform: rotateY(0deg);
+  opacity: 0.9;
+}
+
+.section--animPic .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "Futura Condensed", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateY(180deg) scaleX(-1);
+  backface-visibility: hidden;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.section--animPic .card-back::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--image-url);
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+  z-index: -1;
+}
+
+.section--animPic:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+.section--animPic .card:hover .card-back::after {
+  opacity: 0.3;
 }

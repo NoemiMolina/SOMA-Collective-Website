@@ -3,17 +3,45 @@ import { SlSocialInstagram } from "react-icons/sl";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdMailOutline } from "react-icons/md";
 import louisDazyImage from '../../assets/images/LouisDazyImgs/louisdazypic.jpg';
-import TechNoir from '../../assets/images/LouisDazyImgs/TechNoir.gif';
-import YoungHearts from '../../assets/images/LouisDazyImgs/YoungHearts.gif';
-import ParisienneMoonlight from '../../assets/images/LouisDazyImgs/ParisienneMoonlight.jpg';
-import Smokescreens from '../../assets/images/LouisDazyImgs/Smokescreens.gif';
-import Yearning from '../../assets/images/LouisDazyImgs/Yearning.gif';
-import Escapism from '../../assets/images/LouisDazyImgs/Escapism.jpg';
-import CollapseWithLight from '../../assets/images/LouisDazyImgs/CollapseWithLight.gif'
 import './LouisDazy.css';
+
+interface CustomCSSProperties extends React.CSSProperties {
+    '--image-url'?: string;
+}
 
 const LouisDazyTab = () => {
     const mail = 'louis.dazy@gmail.com';
+    const louisDazyImages = [
+        {
+            src: require('../../assets/images/LouisDazyImgs/TechNoir.gif'),
+            title: 'Tech Noir'
+        },
+        {
+            src: require('../../assets/images/LouisDazyImgs/YoungHearts.gif'),
+            title: 'Young Hearts'
+        },
+        {
+            src: require('../../assets/images/LouisDazyImgs/ParisienneMoonlight.jpg'),
+            title: 'Parisienne Moon light'
+        },
+        {
+            src: require('../../assets/images/LouisDazyImgs/Smokescreens.gif'),
+            title: 'Smokescreens'
+        },
+        {
+            src: require('../../assets/images/LouisDazyImgs/Yearning.gif'),
+            title: 'Yearning'
+        },
+        {
+            src: require('../../assets/images/LouisDazyImgs/Escapism.jpg'),
+            title: 'Escapism'
+        },
+        {
+            src: require('../../assets/images/LouisDazyImgs/CollapseWithLight.gif'),
+            title: 'Collapse With Light'
+        },
+    ]
+
     return (
         <div className="louisDazy-container">
             <div className="louisDazy-container__section">
@@ -39,38 +67,25 @@ const LouisDazyTab = () => {
                         Each image created a poignant moment that implies deep emotion and ongoing action, as such his work is closely aligned with imagery we are more familiar with music videos and Film Noir. He also incorporates text, often in the form of neon sign writing, addind an additional layer of meaning, creating plot points through the confluence of the imagery, color and words. Overall Dazy's work carries us through a heady timeless flow which epitomizes the glamour of the 1950's, the sexuality of the 1970's and the high pressure of the 1980's, blending French film styling with illuminated Asian super cities and American diner aesthetics.
                     </p>
                 </div>
-                <div className="louisDazy-container__section__item">
-                    <img src={TechNoir} alt="Tech Noir gif" />
-                    <p className="art-caption">" Tech Noir "</p>
-                </div>
-                <div className="louisDazy-container__section__item">
-                    <img src={CollapseWithLight} alt="Collapse With Light gif" />
-                    <p className="art-caption">" Collapse With Light "</p>
-                </div>
+                    {louisDazyImages.slice(0, 2).map((image, index) => (
+                        <div key={index} className="louisDazy-container__section__item section--animPic">
+                            <img src={image.src} alt={image.title} />
+                            <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
+                                <p>{`'${image.title}' `}</p>
+                            </div>
+                        </div>
+                    ))}
             </div>
             <div className="louisDazy-container__section">
-                <div className="louisDazy-container__section__item">
-                    <img src={YoungHearts} alt="Young Hearts gif" />
-                    <p className="art-caption">" Young Hearts "</p>
-                </div>
-                <div className="louisDazy-container__section__item">
-                    <img src={ParisienneMoonlight} alt="Parisienne MoonLight img" />
-                    <p className="art-caption">" Parisienne Moonlight "</p>
-                </div>
-                <div className="louisDazy-container__section__item">
-                    <img src={Yearning} alt="Yearning gif" />
-                    <p className="art-caption">" Yearning "</p>
-                </div>
-                <div className="louisDazy-container__section__item">
-                    <img src={Smokescreens} alt="Smokescreens gif" />
-                    <p className="art-caption">" Smokescreens "</p>
-                </div>
-                <div className="louisDazy-container__section__item">
-                    <img src={Escapism} alt="Escapism img" />
-                    <p className="art-caption">" Escapism "</p>
-                </div>
+                {louisDazyImages.slice(2).map((image, index) => (
+                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                        <img src={image.src} alt={image.title} />
+                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
+                            <p>{`'${image.title}' `}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
-
         </div>
     );
 };

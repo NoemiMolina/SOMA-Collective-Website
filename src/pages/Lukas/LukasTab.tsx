@@ -3,22 +3,37 @@ import { SlSocialInstagram } from "react-icons/sl";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdMailOutline } from "react-icons/md";
 import lukasImage from '../../assets/images/LukasImgs/lukaspic.jpg';
-import Combo from '../../assets/images/LukasImgs/Combo.jpg';
-import Opty from '../../assets/images/LukasImgs/Opty.jpg';
-import UtopicCity from '../../assets/images/LukasImgs/UtopicCity.jpg';
-// import Vanite from '../../assets/images/LukasImgs/Vanite.mp4';
-// import Hypnoz from '../../assets/images/LukasImgs/Hypnoz.gif';
-import RonArad from '../../assets/images/LukasImgs/RonArad.jpg';
 import './Lukas.css';
+interface CustomCSSProperties extends React.CSSProperties {
+    '--image-url'?: string;
+}
 
-const OelhanTab = () => {
-    const mail = 'jordan@oelhan.tv'; // demander l'adresse mail de Lukas car pas trouvée
+const LukasTab = () => {
+    const mail = 'contact@polygon1993.com' // demander mail de Lukas
+    const lukasImages = [
+        {
+            src: require('../../assets/images/LukasImgs/UtopicCity.jpg'),
+            title: 'Utopic City'
+        },
+        {
+            src: require('../../assets/images/LukasImgs/Combo.jpg'),
+            title: 'Combo'
+        },
+        {
+            src: require('../../assets/images/LukasImgs/Opty.jpg'),
+            title: 'Opty'
+        },
+        {
+            src: require('../../assets/images/LukasImgs/RonArad.jpg'),
+            title: 'Ron Arad'
+        }
+    ]
     return (
-        <div className="lukas-layout">
-            <div className="artist-presentation">
-                <div className="left-section">
+        <div className="louisDazy-container">
+            <div className="louisDazy-container__section">
+                <div className="louisDazy-container__section__item">
                     <h1 className="title">Lukas</h1>
-                    <p className="painter">The Painter</p>
+                    <p className="glitcher">The Painter</p>
                     <img src={lukasImage} alt="Lukas img" className="lukas-image" />
                     <div className="socials">
                         <p>socials: @lukas.works</p>
@@ -32,7 +47,7 @@ const OelhanTab = () => {
                             <MdMailOutline />
                         </a>
                     </div>
-                    <p className="lukasPresentation">
+                    <p className="louisDazyPresentation">
                         Lukas was born in 1989 in Abidjan, Ivory Coast where he spend his childhood. He then followed his parents to Indonesia where he grew up, finishing high school in Jakarta before moving to France.
                         <br />
                         After graduating from a film school and then from a sound design school in Nantes and Montepllier, he discovered painting at the of his studies, in parallel with his first passion, music. The two mediums allowed him to externalize and share, in his own way, his history, his sensitivity and his visions. Discovering himself as a synesthete, Lukas uses colors as a language, allowing him to spread his energy. Established in Paris since 2013, Lukas does not stop painting and presentes his works during numerous exhibitions and fairs in Paris and internationally. Thanks to a community of buyers and collectors, he improves, seeks, discovers, asserts and learns.
@@ -42,43 +57,27 @@ const OelhanTab = () => {
                         Currently working on new projects and collaborations, notably in Paris and Jaoan, 2023 will mark the end of a cycle and, like the stages of his various tips around the world, Paris becomes a "stopover" before a new great journer to Reunion Island.
                     </p>
                 </div>
-                <div className="right-section">
-                    {/* <div className="large-image-container">
-                    <video controls width="950" margin-top="100px">
-                            <img src={Hypnoz} alt="Hypnoz gif" className="large-image" />
-                        </video>
-                        <p className="art-caption">" Hypnoz "</p>
-                    </div> */}
-                    {/* <div className="large-image-container">
-                        <video controls width="950">
-                            <source src={Vanite} type="video/mp4" className="large-image" />
-                        </video>
-                        <p className="art-caption">" Vanité "</p>
-                    </div> */}
-                </div>
+                {lukasImages.slice(0, 1).map((image, index) => (
+                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                        <img src={image.src} alt={image.title} />
+                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
+                            <p>{`'${image.title}' `}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="image-gallery">
-                <div className="gallery-item">
-                    <img src={UtopicCity} alt="Utopic City img" />
-                    <p className="art-caption">" Utopic City "</p>
-                </div>
-                <div className="gallery-item">
-                    <img src={Opty} alt="Opty img" />
-                    <p className="art-caption">" Opty "</p>
-                </div>
-                <div className="gallery-item">
-                    <img src={Combo} alt="Combo img" />
-                    <p className="art-caption">" Combo "</p>
-                </div>
-
-                <div className="gallery-item">
-                    <img src={RonArad} alt="Ron Arad img" />
-                    <p className="art-caption">" Ron Arad "</p>
-                </div>
-
+            <div className="louisDazy-container__section">
+                {lukasImages.slice(2).map((image, index) => (
+                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                        <img src={image.src} alt={image.title} />
+                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
+                            <p>{`'${image.title}' `}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
 };
 
-export default OelhanTab;
+export default LukasTab;
