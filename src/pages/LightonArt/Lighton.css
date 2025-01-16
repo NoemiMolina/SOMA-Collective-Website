@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=VT323&display=swap");
-
 .louisDazy-container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* padding: 15rem; */
 }
 
 .louisDazy-container__section {
@@ -14,22 +13,31 @@
   display: flex;
 }
 
-.lighton-image {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
 .louisDazy-container__section__item {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
-  font-family: "Futura Condensed", sans-serif;
-  font-size: 33px;
-  color: black;
+  text-align: center;
+}
+
+.louisDazy-container__section__item.animPic {
+  position: relative;
+  overflow: hidden;
+}
+
+.louisDazy-container__section__item.animPic img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.louisDazy-container__section__item.animPic img:hover {
+  transform: translateY(-10px);
+  opacity: 0.8;
+}
+
+.louisDazy-container__section__item:hover .art-caption {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .louisDazy-container__section__item img {
@@ -37,114 +45,47 @@
   height: auto;
 }
 
-.section--logo {
-  height: 15vh;
-  .louisDazy-container__section__item {
-    height: 10vh;
-    object-fit: contain;
-    img {
-      height: 10vh;
-    }
-  }
+.lighton-image {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.section--presentation {
-  height: 90vh;
-  position: relative;
-  .louisDazy-container__section__item {
-    height: 100%;
-    img {
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-}
-
-.section--animPic {
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  transition: transform 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
-}
-
-
-.section--animPic:hover {
-  transform: translateY(-10px);
-}
-
-.section--animPic img {
-  backface-visibility: hidden;
-  transform: rotateY(0deg);
-  transition: transform 0.6s ease-in-out;
-}
-
-.section--animPic::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.illustrator {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8em;
+  color: black;
   text-align: center;
-  color: white;
-  font-size: 18px;
-  line-height: 1.2;
-  padding: 10px;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
+  margin: 10px auto;
+  font-weight: bold;
 }
 
-.section--animPic:hover img {
-  transform: rotateY(180deg);
-}
-
-.section--animPic:hover::after {
-  transform: rotateY(0deg);
-  opacity: 0.9;
-}
-
-.section--animPic .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+.louisDazyPresentation {
   font-family: "Futura Condensed", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transform: rotateY(180deg) scaleX(-1);
-  backface-visibility: hidden;
-  padding: 10px;
-  font-size: 18px;
-  line-height: 1.2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
+  font-size: 1em;
+  color: black;
+  text-align: left;
 }
 
-.section--animPic .card-back::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: var(--image-url);
-  background-size: cover;
-  background-position: center;
-  transform: rotateY(180deg);
-  z-index: -1;
+.art-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  
 }
 
-.section--animPic:hover .card-back {
-  transform: rotateY(0deg);
+@media (max-width: 768px) {
+  .louisDazy-container__section {
+    flex-direction: column;
+  }
 }
 
-.section--animPic .card:hover .card-back::after {
-  opacity: 0.3;
+@media (max-width: 480px) {
 }

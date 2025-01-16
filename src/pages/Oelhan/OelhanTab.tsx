@@ -4,9 +4,6 @@ import { FaXTwitter } from "react-icons/fa6";
 import { MdMailOutline } from "react-icons/md";
 import oelhanImage from '../../assets/images/OelhanImgs/oelhanpic.jpg';
 import './Oelhan.css';
-interface CustomCSSProperties extends React.CSSProperties {
-    '--image-url'?: string;
-}
 
 const OelhanTab = () => {
     const mail = 'jordan@oelhan.tv';
@@ -69,21 +66,17 @@ const OelhanTab = () => {
                     </p>
                 </div>
                 {oelhanImages.slice(0, 2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
-                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
-                            <p>{`'${image.title}' `}</p>
-                        </div>
+                        <p className="art-caption">{image.title}</p>      
                     </div>
                 ))}
             </div>
             <div className="louisDazy-container__section">
                 {oelhanImages.slice(2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
-                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
-                            <p>{`'${image.title}' `}</p>
-                        </div>
+                        <p className="art-caption">{image.title}</p>
                     </div>
                 ))}
             </div>

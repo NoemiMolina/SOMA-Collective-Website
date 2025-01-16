@@ -4,9 +4,6 @@ import { FaXTwitter } from "react-icons/fa6";
 import { MdMailOutline } from "react-icons/md";
 import lukasImage from '../../assets/images/LukasImgs/lukaspic.jpg';
 import './Lukas.css';
-interface CustomCSSProperties extends React.CSSProperties {
-    '--image-url'?: string;
-}
 
 const LukasTab = () => {
     const mail = 'contact@polygon1993.com' // demander mail de Lukas
@@ -33,7 +30,7 @@ const LukasTab = () => {
             <div className="louisDazy-container__section">
                 <div className="louisDazy-container__section__item">
                     <h1 className="title">Lukas</h1>
-                    <p className="glitcher">The Painter</p>
+                    <p className="painter">The Painter</p>
                     <img src={lukasImage} alt="Lukas img" className="lukas-image" />
                     <div className="socials">
                         <p>socials: @lukas.works</p>
@@ -58,21 +55,17 @@ const LukasTab = () => {
                     </p>
                 </div>
                 {lukasImages.slice(0, 1).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
-                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
-                            <p>{`'${image.title}' `}</p>
-                        </div>
+                        <p className="art-caption">{image.title}</p>
                     </div>
                 ))}
             </div>
             <div className="louisDazy-container__section">
                 {lukasImages.slice(2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
-                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
-                            <p>{`'${image.title}' `}</p>
-                        </div>
+                        <p className="art-caption">{image.title}</p>
                     </div>
                 ))}
             </div>

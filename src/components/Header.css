@@ -1,31 +1,33 @@
-/* src/components/Header.css */
-
 .header {
-    font-family: 'Futura Condensed', sans-serif;
+    font-family: "Futura Condensed", sans-serif;
     display: flex;
     align-items: center;
-    padding: 20px; 
+    padding: 20px;
     position: relative;
-    font-size: 25px;
+    font-size: 30px;
+    background-color: #f4EDDE
 }
 
 .menu-button {
     cursor: pointer;
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    width: 40px;
-    height: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
 }
 
 .menu-list {
-    list-style-type: none; 
+    list-style-type: none;
     padding: 10px;
-    margin: 20px;
+    margin: 0;
     position: absolute;
-    top: 70%; 
+    top: 70%;
     left: 0;
-    z-index: 1;
+    background-color: #f4EDDE;
+    z-index: 1000;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item {
@@ -36,42 +38,26 @@
 }
 
 .menu-item:hover {
-    background-color: yellow; 
-    border-radius: 5px;
+    background-color: yellow;
+    border-radius: translateX(5px);
 }
 
 .sub-menu-list {
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-    position: absolute; 
-    background-color: white; 
-    left: 0; 
-    z-index: 2; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color:  #f4EDDE;
+    margin-top: 5px;
 }
 
 .sub-menu-item {
-    padding: 5px 10px; 
-    cursor: pointer; 
-    font-size: 25px; 
-}
-
-.sub-menu-item:last-child {
-    border-bottom: none; 
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 30px;
 }
 
 .sub-menu-item:hover {
-    background-color: yellow; 
-}
-
-.artists-names {
-    position: absolute;
-    right: -10px;
-    top: 50%; 
-    transform: translateY(-50%); 
-    background-color: white;
-    padding: 10px;
-    z-index: 2; 
-    display: flex; 
-    flex-direction: column; 
+    background-color: yellow;
+    border-radius: 5px;
 }

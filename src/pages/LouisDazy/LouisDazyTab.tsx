@@ -5,10 +5,6 @@ import { MdMailOutline } from "react-icons/md";
 import louisDazyImage from '../../assets/images/LouisDazyImgs/louisdazypic.jpg';
 import './LouisDazy.css';
 
-interface CustomCSSProperties extends React.CSSProperties {
-    '--image-url'?: string;
-}
-
 const LouisDazyTab = () => {
     const mail = 'louis.dazy@gmail.com';
     const louisDazyImages = [

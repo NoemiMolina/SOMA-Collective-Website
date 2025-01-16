@@ -4,9 +4,6 @@ import { FaXTwitter } from "react-icons/fa6";
 import { MdMailOutline } from "react-icons/md";
 import polygonImage from '../../assets/images/PolygonImgs/polygonpic.jpg';
 import './Polygon.css';
-interface CustomCSSProperties extends React.CSSProperties {
-    '--image-url'?: string;
-}
 
 const PolygonTab = () => {
     const mail = 'contact@polygon1993.com'
@@ -36,19 +33,19 @@ const PolygonTab = () => {
                     <p className="glitcher">The Glitcher</p>
                     <img src={polygonImage} alt="Polygon img" className="polygon-image" />
                     <div className="socials">
-                    <p>socials: @POLYGON1993</p>
-                    <a href="https://www.instagram.com/polygon1993/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                        <SlSocialInstagram />
-                    </a>
-                    <a href="https://x.com/Polygon1993?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer" className="social-icon">
-                        <FaXTwitter />
-                    </a>
-                    <a href={`mailto:${mail}`} className="social-icon">
-                        <MdMailOutline />
-                    </a>
-                </div>
+                        <p>socials: @POLYGON1993</p>
+                        <a href="https://www.instagram.com/polygon1993/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                            <SlSocialInstagram />
+                        </a>
+                        <a href="https://x.com/Polygon1993?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer" className="social-icon">
+                            <FaXTwitter />
+                        </a>
+                        <a href={`mailto:${mail}`} className="social-icon">
+                            <MdMailOutline />
+                        </a>
+                    </div>
                     <p className="louisDazyPresentation">
-                    When imperfection acts as a diving force for art and analog technology stands alongside digital evolution, the past, present, and future are one!
+                        When imperfection acts as a diving force for art and analog technology stands alongside digital evolution, the past, present, and future are one!
                         POLYGON1993 brings us into a glitch universe that represents his daily life: a distorted world where reality and imagination mingle.
                         <br />
                         POLYGON1993 is a visual artist, film director and media scenographer who has made a name for himself in the world of Glitch Art. His distinct style involves using old circuit bent video gear from the 80s and 90s to create glitchy distorted lines that come together to form portraits. His art is both nostalgic and innovative, blending old technology with creative ideas to create something truly original. His clients include prestigious artists and brands such as A$AP Rocky, Tame Impala, Charli XCX, Pantone, Sony Music, Warner Music and more.
@@ -57,21 +54,17 @@ const PolygonTab = () => {
                     </p>
                 </div>
                 {polygonImages.slice(0, 2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
-                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
-                            <p>{`'${image.title}' `}</p>
-                        </div>
+                        <p className="art-caption">{image.title}</p>
                     </div>
                 ))}
             </div>
             <div className="louisDazy-container__section">
                 {polygonImages.slice(2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item section--animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
-                        <div className="card-back" style={{ '--image-url': `url(${image.src})` } as CustomCSSProperties}>
-                            <p>{`'${image.title}' `}</p>
-                        </div>
+                        <p className="art-caption">{image.title}</p>
                     </div>
                 ))}
             </div>
