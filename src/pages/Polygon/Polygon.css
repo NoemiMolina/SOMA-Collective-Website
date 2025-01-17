@@ -148,3 +148,12 @@
 .section--animPic .card:hover .card-back::after {
   opacity: 0.3;
 }
+
+@media (max-width: 768px) {
+  .louisDazy-container__section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+}

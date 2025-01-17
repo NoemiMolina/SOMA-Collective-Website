@@ -6,7 +6,7 @@ import lukasImage from '../../assets/images/LukasImgs/lukaspic.jpg';
 import './Lukas.css';
 
 const LukasTab = () => {
-    const mail = 'contact@polygon1993.com' // demander mail de Lukas
+    const mail = 'lukas.univers@gmail.com' 
     const lukasImages = [
         {
             src: require('../../assets/images/LukasImgs/UtopicCity.jpg'),

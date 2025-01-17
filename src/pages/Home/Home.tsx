@@ -73,14 +73,14 @@ const Home = () => {
             </div>
             <div className="louisDazy-container__section">
                 {images.slice(0, 1).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic home">
                         <img src={image.src} alt={image.title} />
-                            <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
-                        </div>
+                        <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
+                    </div>
                 ))}
                 <div className="louisDazy-container__section__item">
-                    <h1 className="title">What's behind Soma?</h1>
-                    <p>
+                    <h1 style={{ textAlign: "justify", marginTop: '-20px' }}>What's behind Soma?</h1>
+                    <p style={{ textAlign: "justify", marginTop: '-30px' }}>
                         SOMA Collective stands as a testament to the
                         boundless power of art to transcend borders, unite
                         diverse cultures, and connect people through a
@@ -133,20 +133,21 @@ const Home = () => {
                     </p>
                 </div>
                 {images.slice(1, 2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
+                    <div key={index} className="louisDazy-container__section__item animPic home">
                         <img src={image.src} alt={image.title} />
-                            <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
+                        <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
                     </div>
                 ))}
             </div>
-            <div className="louisDazy-container__section">
-                {images.slice(2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
-                        <img src={image.src} alt={image.title} />
-                            <p className='art-caption'>{`'${image.title}' by ${image.artist}`}</p>
+            <div className="louisDazy-container__section homeSliderGallery">
+                <div className="homeSliderGallery-wrapper">
+                    {[...images.slice(2), ...images.slice(2)].map((image, index) => (
+                        <div key={index} className="louisDazy-container__section__item animPic homeSlide">
+                            <img src={image.src} alt={image.title} />
+                            <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
                         </div>
-              
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

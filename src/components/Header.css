@@ -4,7 +4,7 @@
     align-items: center;
     padding: 20px;
     position: relative;
-    font-size: 30px;
+    font-size: 35px;
     background-color: #f4EDDE
 }
 
@@ -34,7 +34,7 @@
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .menu-item:hover {
@@ -48,13 +48,16 @@
     margin: 0;
     background-color:  #f4EDDE;
     margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .sub-menu-item {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .sub-menu-item:hover {
