@@ -3,10 +3,14 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    position: relative;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
     font-size: 35px;
-    background-color: #f4EDDE
+    z-index: 1000; 
 }
+
 
 .menu-button {
     cursor: pointer;

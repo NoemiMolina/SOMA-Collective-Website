@@ -45,13 +45,13 @@ const ExhibitionTab = () => {
 
     return (
         <div className="container">
-            <div className="louisDazy-container__section">
+            <div className="page-container__section">
                 {exhibitionsImages.slice(0, 1).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
+                    <div key={index} className="page-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
                     </div>
                 ))}
-                <div className="louisDazy-container__section__item">
+                <div className="page-container__section__item">
                     <div className="text-container">
                         <h1 className="title">Previous Events</h1>
                         <p className="louisDazyPresentation exhibitionPresentation">
@@ -70,11 +70,11 @@ const ExhibitionTab = () => {
                     </div>
                 </div>
                 {exhibitionsImages.slice(1, 2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
+                    <div key={index} className="page-container__section__item animPic">
                         <img src={image.src} alt={image.title} />
                     </div>
                 ))}
-                <div className="louisDazy-container__section__item">
+                <div className="page-container__section__item">
                     <div className="text-container two-columns">
                         <div className="column">
                             <h1 className="title">Collaboration Opportunity</h1>
@@ -143,9 +143,9 @@ const ExhibitionTab = () => {
                     </div>
 
                 </div>
-                <div className="louisDazy-container__section">
+                <div className="page-container__section">
                     {exhibitionsImages.slice(4).map((image, index) => (
-                        <div key={index} className="louisDazy-container__section__item animPic">
+                        <div key={index} className="page-container__section__item animPic">
                             <img src={image.src} alt={image.title} />
                         </div>
                     ))}

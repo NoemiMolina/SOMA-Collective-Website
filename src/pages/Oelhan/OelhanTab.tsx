@@ -39,9 +39,9 @@ const OelhanTab = () => {
 
     ]
     return (
-        <div className="louisDazy-container">
-            <div className="louisDazy-container__section">
-                <div className="louisDazy-container__section__item">
+        <div className="page-container">
+            <div className="page-container__section">
+                <div className="page-container__section__item">
                     <h1 className="title">Oelhan</h1>
                     <p className="animator">The Animator</p>
                     <img src={oelhanImage} alt="Oelhan Img" className="oelhan-image" />
@@ -57,7 +57,7 @@ const OelhanTab = () => {
                             <MdMailOutline />
                         </a>
                     </div>
-                    <p className="louisDazyPresentation">
+                    <p className="louisDazyPresentation" style={{ textAlign: "justify"}}>
                     When emotions and sensationsd merge into an animated whirlwind at the boundaries of the human mind...
                     <br />
                     Oelhan, a established animator based in Paris, embordies this fusion. His creations skillfully blend 3D elements, constrasting color schemes, and striking visual treatments. His work is a profound exploration of the nuances of human emotions. Specifically, Oelhan delves into conflicting feelings and suppressed passions within us. Through his short animations, he manages to capture this captivating complexity with a playful touch.
@@ -66,15 +66,15 @@ const OelhanTab = () => {
                     </p>
                 </div>
                 {oelhanImages.slice(0, 2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
+                    <div key={index} className="page-container__section__item animPic artist">
                         <img src={image.src} alt={image.title} />
                         <p className="art-caption">{image.title}</p>      
                     </div>
                 ))}
             </div>
-            <div className="louisDazy-container__section">
+            <div className="page-container__section">
                 {oelhanImages.slice(2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
+                    <div key={index} className="page-container__section__item animPic artist">
                         <img src={image.src} alt={image.title} />
                         <p className="art-caption">{image.title}</p>
                     </div>

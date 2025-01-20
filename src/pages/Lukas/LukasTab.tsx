@@ -26,9 +26,9 @@ const LukasTab = () => {
         }
     ]
     return (
-        <div className="louisDazy-container">
-            <div className="louisDazy-container__section">
-                <div className="louisDazy-container__section__item">
+        <div className="page-container">
+            <div className="page-container__section">
+                <div className="page-container__section__item">
                     <h1 className="title">Lukas</h1>
                     <p className="painter">The Painter</p>
                     <img src={lukasImage} alt="Lukas img" className="lukas-image" />
@@ -44,7 +44,7 @@ const LukasTab = () => {
                             <MdMailOutline />
                         </a>
                     </div>
-                    <p className="louisDazyPresentation">
+                    <p className="louisDazyPresentation" style={{ textAlign: "justify"}}>
                         Lukas was born in 1989 in Abidjan, Ivory Coast where he spend his childhood. He then followed his parents to Indonesia where he grew up, finishing high school in Jakarta before moving to France.
                         <br />
                         After graduating from a film school and then from a sound design school in Nantes and Montepllier, he discovered painting at the of his studies, in parallel with his first passion, music. The two mediums allowed him to externalize and share, in his own way, his history, his sensitivity and his visions. Discovering himself as a synesthete, Lukas uses colors as a language, allowing him to spread his energy. Established in Paris since 2013, Lukas does not stop painting and presentes his works during numerous exhibitions and fairs in Paris and internationally. Thanks to a community of buyers and collectors, he improves, seeks, discovers, asserts and learns.
@@ -55,15 +55,15 @@ const LukasTab = () => {
                     </p>
                 </div>
                 {lukasImages.slice(0, 1).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
+                    <div key={index} className="page-container__section__item animPic artist">
                         <img src={image.src} alt={image.title} />
                         <p className="art-caption">{image.title}</p>
                     </div>
                 ))}
             </div>
-            <div className="louisDazy-container__section">
+            <div className="page-container__section">
                 {lukasImages.slice(2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
+                    <div key={index} className="page-container__section__item animPic artist">
                         <img src={image.src} alt={image.title} />
                         <p className="art-caption">{image.title}</p>
                     </div>

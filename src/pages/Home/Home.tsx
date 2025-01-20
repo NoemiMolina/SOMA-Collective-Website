@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import somalogo from '../../assets/somalogo/logo.svg';
 import { useNavigate } from 'react-router-dom';
-import SurpriseReset from '../../assets/images/LightonImgs/SurpriseReset.gif'
+import presentation from '../../assets/images/presentation.jpg';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -18,8 +18,7 @@ const Home = () => {
             src: require('../../assets/images/LightonImgs/SurpriseReset.gif'),
             title: 'Surprise Reset',
             artist: 'Lighton',
-            route: '/Lightonart'
-
+            route: '/Lightonart',
         },
         {
             src: require('../../assets/images/LukasImgs/BigStar.jpg'),
@@ -64,23 +63,36 @@ const Home = () => {
             route: '/LouisDazy',
         },
     ];
+
+    const handleImageClick = (route: string) => {
+        navigate(route);
+    };
+
     return (
-        <div className="louisDazy-container">
-            <div className="louisDazy-container__section section--logo">
-                <div className="louisDazy-container__section__item">
+        <div className="page-container home">
+            <div className="page-container__section section--logo">
+                <div className="page-container__section__item home">
                     <img src={somalogo} alt="Logo" />
                 </div>
             </div>
-            <div className="louisDazy-container__section">
+            <div className="page-container__section section--presentation">
+                <div className="page-container__section__item presentation">
+                    <img src={presentation} alt="Présentation"/>
+                </div>
+            </div>
+            <div className="page-container__section section--content">
                 {images.slice(0, 1).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic home">
+                    <div
+                        key={index}
+                        className="page-container__section__item animPic first-slice"
+                    >
                         <img src={image.src} alt={image.title} />
                         <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
                     </div>
                 ))}
-                <div className="louisDazy-container__section__item">
-                    <h1 style={{ textAlign: "justify", marginTop: '-20px' }}>What's behind Soma?</h1>
-                    <p style={{ textAlign: "justify", marginTop: '-30px' }}>
+                <div className="page-container__section__item">
+                    <h1 style={{ textAlign: "justify" , marginRight:"10%", marginLeft:"-2000px", marginTop: '7%' }}>What's behind Soma?</h1>
+                    <p className='presentationText'>
                         SOMA Collective stands as a testament to the
                         boundless power of art to transcend borders, unite
                         diverse cultures, and connect people through a
@@ -108,7 +120,23 @@ const Home = () => {
                         Through each physical artwork, visitors can feel the tangible
                         presence of the artist's hand, while digital
                         creations challenge the limits of the possible.
-                        <br />
+                    </p>
+                </div>
+            </div>
+
+            <div className="page-container__section homeSliderGallery">
+                <div className="homeSliderGallery-wrapper">
+                    {[...images.slice(2), ...images.slice(2)].map((image, index) => (
+                        <div key={index} className="page-container__section__item animPic homeSlide" onClick={() => handleImageClick(image.route)} style={{ cursor: 'pointer' }}>
+                            <img src={image.src} alt={image.title} />
+                            <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="page-container__section section--extra">
+                <div className="page-container__section__item">
+                    <p className='presentationEnd'>
                         As we embark on this global journey, we aim to
                         offer audiences a unique experience that transcends
                         geographic borders. By presenting our exhibitions
@@ -129,25 +157,20 @@ const Home = () => {
                         world where creativity knows no bounds, and where
                         art serves as a bridge that unites us all.
                         <br />
-                        In a world where the boundaries between the tangible and the virtual continue to blur, SOMA Collective embraces this transformation as an opportunity for exploration.
+                        In a world where the boundaries between the tangible and the virtual continue to blur, SOMA Collective embraces this transformation as an opportunity for exploration.                     
                     </p>
+
                 </div>
                 {images.slice(1, 2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic home">
-                        <img src={image.src} alt={image.title} />
-                        <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
-                    </div>
-                ))}
-            </div>
-            <div className="louisDazy-container__section homeSliderGallery">
-                <div className="homeSliderGallery-wrapper">
-                    {[...images.slice(2), ...images.slice(2)].map((image, index) => (
-                        <div key={index} className="louisDazy-container__section__item animPic homeSlide">
+                        <div
+                            key={index}
+                            className="page-container__section__item animPic last-slice"
+                            onClick={() => handleImageClick(image.route)} style={{ cursor: 'pointer' }}
+                        >
                             <img src={image.src} alt={image.title} />
                             <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
                         </div>
                     ))}
-                </div>
             </div>
         </div>
     );

@@ -1,10 +1,10 @@
-.louisDazy-container {
+.page-container {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.louisDazy-container__section {
+.page-container__section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -12,7 +12,7 @@
   display: flex;
 }
 
-.louisDazy-container__section__item {
+.page-container__section__item {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -20,32 +20,40 @@
   text-align: center;
 }
 
-.louisDazy-container__section__item.animPic {
+.page-container__section__item.animPic.artist {
   position: relative;
-  overflow: hidden;
+  border-radius: 10px;
 }
 
-.louisDazy-container__section__item.animPic img {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.page-container__section__item.animPic.artist img {
+  max-width: 90%;
+  width: 150%; 
+  height: auto; 
+  object-fit: cover; 
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  margin-top: 10%;
 }
 
-.louisDazy-container__section__item.animPic img:hover {
-  transform: translateY(-10px);
+.page-container__section__item.animPic.artist img:hover {
+  transform: translateY(-10px); 
   opacity: 0.8;
+  border-radius: 10px;
 }
 
-.louisDazy-container__section__item:hover .art-caption {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.louisDazy-container__section__item img {
+.page-container__section__item img {
   width: 100%;
   height: auto;
+  border-radius: 10px; 
+}
+
+.page-container__section__item:hover .art-caption {
+  opacity: 1;
+  transform: translateY(0); 
+  border-radius: 10px;
 }
 
 .louisDazy-image {
-  max-width: 30%;
+  max-width: 25%; 
   height: auto;
   display: block;
   margin: 0 auto;
@@ -68,23 +76,29 @@
 }
 
 .art-caption {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    font-size: 1.2em;
-    color: black;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  font-size: 1.2em;
+  color: black;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 @media (max-width: 768px) {
-  .louisDazy-container__section {
+  .page-container__section {
     flex-direction: column;
   }
 }
 
 @media (max-width: 480px) {
+  .louisDazy-image {
+    max-width: 80%;
+  }
+
+  .art-caption {
+    font-size: 1em;
+  }
 }

@@ -9,15 +9,18 @@ const Header = () => {
     const navigate = useNavigate();
 
     const toggleMenu = () => {
+        console.log('COUCOU')
         setIsMenuOpen(!isMenuOpen);
         setIsArtistsDropdownOpen(false);
     };
 
     const handleNavigation = (path: string) => {
+        console.log(`Navigating to: ${path}`);
         setIsMenuOpen(false); 
         setIsArtistsDropdownOpen(false);
         navigate(path);
     };
+    
 
     const toggleArtistsDropdown = () => {
         setIsArtistsDropdownOpen(!isArtistsDropdownOpen);

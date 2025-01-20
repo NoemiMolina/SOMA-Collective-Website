@@ -25,7 +25,7 @@
     filter: brightness(0.8);
 }
 
-.louisDazy-container__section {
+.page-container__section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -34,7 +34,7 @@
   
 }
 
-.louisDazy-container__section__item {
+.page-container__section__item {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -81,26 +81,26 @@
     color: black
 }
 
-.louisDazy-container__section__item.animPic {
+.page-container__section__item.animPic {
     position: relative;
     overflow: hidden;
 }
 
-.louisDazy-container__section__item.animPic img {
+.page-container__section__item.animPic img {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.louisDazy-container__section__item.animPic img:hover {
+.page-container__section__item.animPic img:hover {
     transform: translateY(-10px);
     opacity: 0.8;
 }
 
-.louisDazy-container__section__item:hover .art-caption {
+.page-container__section__item:hover .art-caption {
     opacity: 1;
     transform: translateY(0);
 }
 
-.louisDazy-container__section__item img {
+.page-container__section__item img {
     width: 100%;
     height: auto;
 }

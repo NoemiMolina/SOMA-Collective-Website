@@ -26,9 +26,9 @@ const PolygonTab = () => {
         }
     ]
     return (
-        <div className="louisDazy-container">
-            <div className="louisDazy-container__section">
-                <div className="louisDazy-container__section__item">
+        <div className="page-container">
+            <div className="page-container__section">
+                <div className="page-container__section__item">
                     <h1 className="title">Polygon1993</h1>
                     <p className="glitcher">The Glitcher</p>
                     <img src={polygonImage} alt="Polygon img" className="polygon-image" />
@@ -44,7 +44,7 @@ const PolygonTab = () => {
                             <MdMailOutline />
                         </a>
                     </div>
-                    <p className="louisDazyPresentation">
+                    <p className="louisDazyPresentation" style={{ textAlign: "justify"}}>
                         When imperfection acts as a diving force for art and analog technology stands alongside digital evolution, the past, present, and future are one!
                         POLYGON1993 brings us into a glitch universe that represents his daily life: a distorted world where reality and imagination mingle.
                         <br />
@@ -54,15 +54,15 @@ const PolygonTab = () => {
                     </p>
                 </div>
                 {polygonImages.slice(0, 2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
+                    <div key={index} className="page-container__section__item animPic artist">
                         <img src={image.src} alt={image.title} />
                         <p className="art-caption">{image.title}</p>
                     </div>
                 ))}
             </div>
-            <div className="louisDazy-container__section">
+            <div className="page-container__section">
                 {polygonImages.slice(2).map((image, index) => (
-                    <div key={index} className="louisDazy-container__section__item animPic">
+                    <div key={index} className="page-container__section__item animPic artist">
                         <img src={image.src} alt={image.title} />
                         <p className="art-caption">{image.title}</p>
                     </div>
