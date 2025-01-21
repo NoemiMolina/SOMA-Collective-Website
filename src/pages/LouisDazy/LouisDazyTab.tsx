@@ -39,44 +39,50 @@ const LouisDazyTab = () => {
     ]
 
     return (
-        <div className="page-container">
-            <div className="page-container__section">
-                <div className="page-container__section__item" style={{marginLeft:''}}>
-                    <h1 className="title">Louis Dazy</h1>
-                    <p className="photographer">The Photographer</p>
-                    <img src={louisDazyImage} alt="Louis Dazy img" style={{maxWidth:'65%'}} />   
-                    <p className="louisDazyPresentation" style={{ textAlign: "justify"}}>
-                        Louis Dazy is a conceptual photographer and visual artist based in Paris, France. His approach combines portraiture, street photography and light work to create highly evocative, cinematic images. Dazy brings layered meaning to this images through the process of double exposure on film and digital collage. His images are created out of velvety darkness, glowing neon and starry sparks of light, carrying all the potency of a dream or a still from a movie. He takes an intuitive approach to convey feelings of nostalgia and melancholy with many of his works capturing outward glamour alongside private contemplation.
+        <div className="page-container artist">
+            <div className="content-wrapper">
+                <div className="presentation">
+                    <h1 className="photographer">The Photographer</h1>
+                    <h2 className="title artist"><strong>Louis Dazy</strong></h2>
+                    <img
+                        src={louisDazyImage}
+                        alt="Louis Dazy img"
+                        style={{ maxWidth: '50%', borderRadius: '2%', marginTop: '2%' }}
+                        className="louisDazy-image"
+                    />
+                    <p
+                        className="louisDazyPresentation"
+                        style={{ textAlign: "justify", fontSize: "2.5em", maxWidth: '50%', marginLeft: '25%' }}
+                    >
+                        Louis Dazy, a Paris-based conceptual photographer and visual artist, skillfully blends portraiture, street photography, and light manipulation to craft evocative, cinematic images.
                         <br />
-                        Each image created a poignant moment that implies deep emotion and ongoing action, as such his work is closely aligned with imagery we are more familiar with music videos and Film Noir. He also incorporates text, often in the form of neon sign writing, addind an additional layer of meaning, creating plot points through the confluence of the imagery, color and words. Overall Dazy's work carries us through a heady timeless flow which epitomizes the glamour of the 1950's, the sexuality of the 1970's and the high pressure of the 1980's, blending French film styling with illuminated Asian super cities and American diner aesthetics.
+                        Through techniques like double exposure and digital collage, he conjures images imbued with nostalgia and melancholy.
+                        <br />
+                        Dazy's fusing elements from various eras and cultures, creating a visual narrative that's captivating and thought-provoking.
                     </p>
-                    <div className="socials">
-                        <p>socials: @louisdazy</p>
-                        <a href="https://www.instagram.com/louisdazy/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <div className="socials" style={{fontSize: '2em'}}>
+                        <p><strong>socials: @louisdazy</strong></p>
+                        <a href="https://www.instagram.com/louisdazy/" target="_blank" rel="noopener noreferrer" className="social-icon" style={{fontSize: '1.5em', margin: '0 20px'}}>
                             <SlSocialInstagram />
                         </a>
-                        <a href="https://x.com/LouisDazy" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <a href="https://x.com/LouisDazy" target="_blank" rel="noopener noreferrer" className="social-icon" style={{fontSize: '1.5em', margin: '0 20px'}}>
                             <FaXTwitter />
                         </a>
-                        <a href={`mailto:${mail}`} className="social-icon">
+                        <a href={`mailto:${mail}`} className="social-icon" style={{fontSize: '1.5em', margin: '0 20px'}}>
                             <MdMailOutline />
                         </a>
                     </div>
                 </div>
-                    {louisDazyImages.slice(0, 2).map((image, index) => (
-                        <div key={index} className="page-container__section__item animPic artist">
-                            <img src={image.src} alt={image.title} />
-                            <p className="art-caption">{image.title}</p>
+                <div className="page-container__section artistSliderGallery">
+                    <div className="artistSliderGallery-wrapper">
+                        {[...louisDazyImages.slice(2), ...louisDazyImages.slice(2)].map((image, index) => (
+                            <div key={index} className="page-container__section__item animPic artistSlide">
+                                <img src={image.src} alt={image.title} />
+                                <p className="art-caption" style={{ fontSize: '1em' }}>{`'${image.title}' `}</p>
                             </div>
-                    ))}
-            </div>
-            <div className="page-container__section">
-                {louisDazyImages.slice(2).map((image, index) => (
-                    <div key={index} className="page-container__section__item animPic artist">
-                        <img src={image.src} alt={image.title} />
-                        <p className="art-caption">{image.title}</p>
+                        ))}
                     </div>
-                ))}
+                </div>
             </div>
         </div>
     );

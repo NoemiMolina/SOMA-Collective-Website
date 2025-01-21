@@ -33,16 +33,10 @@ const Home = () => {
             route: '/Lightonart',
         },
         {
-            src: require('../../assets/images/PolygonImgs/Zaora.jpg'),
-            title: 'Zaora',
+            src: require('../../assets/images/PolygonImgs/Impala.jpg'),
+            title: 'Impala',
             artist: 'Polygon1993',
             route: '/Polygon',
-        },
-        {
-            src: require('../../assets/images/OelhanImgs/Sailor.gif'),
-            title: 'Sailor',
-            artist: 'Oelhan',
-            route: '/Oelhantv',
         },
         {
             src: require('../../assets/images/LouisDazyImgs/Blindsided.jpg'),
@@ -87,11 +81,11 @@ const Home = () => {
                         className="page-container__section__item animPic first-slice"
                     >
                         <img src={image.src} alt={image.title} />
-                        <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
+                        <p className="art-caption" style={{fontSize:'1em'}}>{`'${image.title}' by ${image.artist}`}</p>
                     </div>
                 ))}
                 <div className="page-container__section__item">
-                    <h1 style={{ textAlign: "justify" , marginRight:"10%", marginLeft:"-2000px", marginTop: '7%' }}>What's behind Soma?</h1>
+                    <h1 className='SomaTitle'>What's behind Soma?</h1>
                     <p className='presentationText'>
                         SOMA Collective stands as a testament to the
                         boundless power of art to transcend borders, unite
@@ -129,7 +123,7 @@ const Home = () => {
                     {[...images.slice(2), ...images.slice(2)].map((image, index) => (
                         <div key={index} className="page-container__section__item animPic homeSlide" onClick={() => handleImageClick(image.route)} style={{ cursor: 'pointer' }}>
                             <img src={image.src} alt={image.title} />
-                            <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
+                            <p className="art-caption" style={{fontSize:'1em'}}>{`'${image.title}' by ${image.artist}`}</p>
                         </div>
                     ))}
                 </div>
@@ -168,7 +162,7 @@ const Home = () => {
                             onClick={() => handleImageClick(image.route)} style={{ cursor: 'pointer' }}
                         >
                             <img src={image.src} alt={image.title} />
-                            <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
+                            <p className="art-caption" style={{fontSize:'1em'}}>{`'${image.title}' by ${image.artist}`}</p>
                         </div>
                     ))}
             </div>

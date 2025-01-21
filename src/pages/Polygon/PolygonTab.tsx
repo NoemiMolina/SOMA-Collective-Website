@@ -13,8 +13,8 @@ const PolygonTab = () => {
             title: 'Inner Colour'
         },
         {
-            src: require('../../assets/images/PolygonImgs/Impala.jpg'),
-            title: 'Impala'
+            src: require('../../assets/images/PolygonImgs/Zaora.jpg'),
+            title: 'Zaora'
         },
         {
             src: require('../../assets/images/PolygonImgs/CathodeRayFusion.gif'),
