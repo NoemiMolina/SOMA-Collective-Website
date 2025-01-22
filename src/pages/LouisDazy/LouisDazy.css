@@ -14,7 +14,7 @@
 }
 
 .presentation {
-  margin-top: 4%;
+  margin-top: 5%;
 }
 
 .page-container__section.artist {
@@ -42,12 +42,6 @@
   margin-top: -4%;
 }
 
-.socials {
-  font-size: 5em;
-  justify-items: center;
-  font-family: "Orbitron", sans-serif;
-}
-
 .artistSliderGallery::before,
 .artistSliderGallery::after {
   content: '';
@@ -55,7 +49,7 @@
   top: 0;
   bottom: 0;
   width: 10%;
-  background: linear-gradient(to right, #f4EDDE 0%, rgba(244, 237, 222, 0) 4000%);
+  background: linear-gradient(to right, white 0%, rgb(255, 255, 255) 4000%);
   filter: blur(40px);
   z-index: 1;
   margin-right: -5%;
@@ -76,12 +70,36 @@
 
 .artistSliderGallery-wrapper img {
   margin-top: 15%;
-  max-width: 700%;
-  max-height: 700%;
+  max-width: 30%;
+  max-height: 50%;
   object-fit: contain;
   box-sizing: content-box;
   border-radius: 10px;
 }
+
+.artistSliderGallery-wrapper .art-caption {
+  opacity: 0;
+  transform: translateY(20px); 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  bottom: 20%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  font-size: 0.5em; 
+  text-align: center;
+  background-color: rgba(244, 237, 222, 0.8);
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  max-width: 20%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.artistSliderGallery-wrapper .artistSlide:hover .art-caption {
+  opacity: 1;
+  
+  transform: translateY(0); /* Réinitialise le décalage */
+}
+
 
 .artistSlide {
   flex-shrink: 0;
@@ -89,6 +107,7 @@
   height: 2050px;
   margin: 0 10px;
   border-radius: 10px;
+
 }
 
 @keyframes scroll {
@@ -118,42 +137,43 @@
 
 .photographer {
   font-family: "Orbitron", sans-serif;
-  font-size: 1.8em;
+  font-size: 1em;
   color: black;
   text-align: justify;
   margin: 0 auto;
   font-weight: bold;
-  margin-left: 25%;
+  margin-left: 30%;
   margin-bottom: 5px;
 }
 
-.title.artist {
-  font-size: 5em;
+.title-artist {
+  font-size: 1.5em;
   font-family: "Orbitron", sans-serif;
-  margin-left: 25%;
+  margin-left: 30%;
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.art-caption {
+.art-caption.artist {
   position: absolute;
-  bottom: 10%; 
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.5em; 
+  top: 63%;
+  left: 5%;
+  transform: translateX(-50%, -50%);
+  font-size: 0.5em;
   text-align: center;
   word-wrap: break-word;
   background-color: rgba(244, 237, 222, 0.8);
-  padding: 0.3em 0.5em;
+  padding: 0.1em 0.2em;
   border-radius: 5px;
   max-width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  overflow: hidden; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   word-wrap: break-word;
-  white-space: normal; 
+  white-space: normal;
 }
 
-.artist-container__section__item:hover .art-caption {
+
+.artist-container__section__item:hover .art-caption.artist {
   opacity: 1;
   transform: translateY(0);
   border-radius: 10px;
@@ -171,7 +191,7 @@
     max-width: 80%;
   }
 
-  .art-caption {
+  .art-caption.artist {
     font-size: 1em;
   }
 }

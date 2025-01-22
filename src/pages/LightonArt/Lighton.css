@@ -1,11 +1,23 @@
-.page-container {
+.page-container.artist {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* padding: 15rem; */
 }
 
-.page-container__section {
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+}
+
+.presentation {
+  margin-top: 4%;
+}
+
+.page-container__section.artist {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -13,7 +25,7 @@
   display: flex;
 }
 
-.page-container__section__item {
+.page-container__section__item.artist {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -21,32 +33,84 @@
   text-align: center;
 }
 
-.page-container__section__item.animPic {
-  position: relative;
+.artistSliderGallery {
+  display: flex;
   overflow: hidden;
+  position: relative;
+  margin-right: 10%;
+  padding-right: 25%;
+  margin-top: -4%;
 }
 
-.page-container__section__item.animPic img {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.socials {
+  font-size: 5em;
+  justify-items: center;
+  font-family: "Orbitron", sans-serif;
 }
 
-.page-container__section__item.animPic img:hover {
-  transform: translateY(-10px);
-  opacity: 0.8;
+.artistSliderGallery::before,
+.artistSliderGallery::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  background:  linear-gradient(to right, white 0%, rgb(255,255,255)  4000%);
+  filter: blur(40px);
+  z-index: 1;
+  margin-right: -5%;
+  margin-left: -5%;
+  margin-bottom: -15%
 }
 
-.page-container__section__item:hover .art-caption {
-  opacity: 1;
-  transform: translateY(0);
+.artistSliderGallery::after {
+  right: 0;
+  transform: rotate(180deg);
 }
 
-.page-container__section__item img {
-  width: 100%;
+.artistSliderGallery-wrapper {
+  margin-top: 20%;
+  display: flex;
+  animation: scroll 60s linear infinite;
+}
+
+.artistSliderGallery-wrapper img {
+  margin-top: 15%;
+  max-width: 700%;
+  max-height: 700%;
+  object-fit: contain;
+  box-sizing: content-box;
+  border-radius: 10px;
+}
+
+.artistSlide {
+  flex-shrink: 0;
+  width: 1000px;
+  height: 2050px;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.artistSliderGallery-wrapper img {
+  max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
+
 
 .lighton-image {
-  max-width: 50%;
+  max-width: 25%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -56,36 +120,59 @@
   font-family: "Orbitron", sans-serif;
   font-size: 1.8em;
   color: black;
-  text-align: center;
-  margin: 10px auto;
+  text-align: justify;
+  margin: 0 auto;
   font-weight: bold;
+  margin-left: 25%;
+  margin-bottom: 5px;
 }
 
-.louisDazyPresentation {
-  font-family: "Futura Condensed", sans-serif;
-  font-size: 1em;
-  color: black;
-  text-align: left;
+.title.artist {
+  font-size: 5em;
+  font-family: "Orbitron", sans-serif;
+  margin-left: 25%;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-.art-caption {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    font-size: 1.2em;
-    color: black;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  
+.art-caption.artist {
+  position: absolute;
+  top: 63%; 
+  left: 5%;
+  transform: translateX(-50%, -50%);
+  font-size: 0.5em; 
+  text-align: center;
+  word-wrap: break-word;
+  background-color: rgba(244, 237, 222, 0.8);
+  padding: 0.1em 0.2em;
+  border-radius: 5px;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  word-wrap: break-word;
+  white-space: normal; 
 }
+
+
+.artist-container__section__item:hover .art-caption.artist {
+  opacity: 1;
+  transform: translateY(0);
+  border-radius: 10px;
+}
+
 
 @media (max-width: 768px) {
-  .page-container__section {
+  .artist-container__section {
     flex-direction: column;
   }
 }
 
 @media (max-width: 480px) {
+  .lighton-image {
+    max-width: 80%;
+  }
+
+  .art-caption.artist {
+    font-size: 1em;
+  }
 }

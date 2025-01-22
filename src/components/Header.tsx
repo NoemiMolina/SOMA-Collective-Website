@@ -9,13 +9,11 @@ const Header = () => {
     const navigate = useNavigate();
 
     const toggleMenu = () => {
-        console.log('COUCOU')
         setIsMenuOpen(!isMenuOpen);
         setIsArtistsDropdownOpen(false);
     };
 
     const handleNavigation = (path: string) => {
-        console.log(`Navigating to: ${path}`);
         setIsMenuOpen(false); 
         setIsArtistsDropdownOpen(false);
         navigate(path);
@@ -44,7 +42,6 @@ const Header = () => {
                     </div>
                     {isArtistsDropdownOpen && (
                         <div className="sub-menu-list">
-                            <div className="sub-menu-item" onClick={() => handleNavigation("/Polygon")}>Polygon1993</div>
                             <div className="sub-menu-item" onClick={() => handleNavigation("/LouisDazy")}>Louis Dazy</div>
                             <div className="sub-menu-item" onClick={() => handleNavigation("/Oelhantv")}>Oelhan</div>
                             <div className="sub-menu-item" onClick={() => handleNavigation("/Lightonart")}>Lighton</div>

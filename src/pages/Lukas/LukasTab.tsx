@@ -5,8 +5,9 @@ import { MdMailOutline } from "react-icons/md";
 import lukasImage from '../../assets/images/LukasImgs/lukaspic.jpg';
 import './Lukas.css';
 
+
 const LukasTab = () => {
-    const mail = 'lukas.univers@gmail.com' 
+    const mail = 'lukas.univers@gmail.com'
     const lukasImages = [
         {
             src: require('../../assets/images/LukasImgs/UtopicCity.jpg'),
@@ -25,49 +26,51 @@ const LukasTab = () => {
             title: 'Ron Arad'
         }
     ]
+
     return (
-        <div className="page-container">
-            <div className="page-container__section">
-                <div className="page-container__section__item">
-                    <h1 className="title">Lukas</h1>
-                    <p className="painter">The Painter</p>
-                    <img src={lukasImage} alt="Lukas img" className="lukas-image" />
-                    <div className="socials">
-                        <p>socials: @lukas.works</p>
-                        <a href="https://www.instagram.com/lukas.works/" target="_blank" rel="noopener noreferrer" className="social-icon">
+        <div className="page-container artist">
+            <div className="content-wrapper">
+                <div className="presentation">
+                    <h1 className="painter">The Painter</h1>
+                    <h2 className="title artist"><strong>Lukas</strong></h2>
+                    <img
+                        src={lukasImage}
+                        alt="Lukas img"
+                        style={{ maxWidth: '50%', borderRadius: '2%', marginTop: '2%' }}
+                        className="lukas-image"
+                    />
+                    <p
+                        className="lukasPresentation"
+                        style={{ textAlign: "justify", fontSize: "2.5em", maxWidth: '50%', marginLeft: '25%', fontFamily: 'Futura Condensed, sans-serif' }}
+                    >
+                        Lukas, born in Ivoary Coast and raised in Indonesia and France, discovered his passion for painting and music alongside his academic journey. As a synesthete, he employs colors as his language to externalize his history, sensitivity and visions.
+                        <br />
+                        His art has been exhibited internationally, and in 2021, he joined the ranks of artists on SuperRare.com, while his creative journey continues with upcoming projects and collaborations in Paris and Japan.
+
+                    </p>
+                    <div className="socials" style={{ fontSize: '2em' }}>
+                        <p><strong>socials: @lukas.works</strong></p>
+                        <a href="https://www.instagram.com/lukas.works/" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px' }}>
                             <SlSocialInstagram />
                         </a>
-                        <a href="https://x.com/LUKASWORKS01" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <a href="https://x.com/LUKASWORKS01" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px' }}>
                             <FaXTwitter />
                         </a>
-                        <a href={`mailto:${mail}`} className="social-icon">
+                        <a href={`mailto:${mail}`} className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px' }}>
                             <MdMailOutline />
                         </a>
                     </div>
-                    <p className="louisDazyPresentation" style={{ textAlign: "justify"}}>
-                        Lukas was born in 1989 in Abidjan, Ivory Coast where he spend his childhood. He then followed his parents to Indonesia where he grew up, finishing high school in Jakarta before moving to France.
-                        <br />
-                        After graduating from a film school and then from a sound design school in Nantes and Montepllier, he discovered painting at the of his studies, in parallel with his first passion, music. The two mediums allowed him to externalize and share, in his own way, his history, his sensitivity and his visions. Discovering himself as a synesthete, Lukas uses colors as a language, allowing him to spread his energy. Established in Paris since 2013, Lukas does not stop painting and presentes his works during numerous exhibitions and fairs in Paris and internationally. Thanks to a community of buyers and collectors, he improves, seeks, discovers, asserts and learns.
-                        <br />
-                        In 2016, he joined the prestigious Emaux de Longwy factory as an artist designer. A studio artist but still driven by the desire to deconstruct certain preconceived notions about art, he has been discreetly intervening since 2017 every summer on the Pont des Arts where he exhibits his works. It is also here that he met a curator of one of the largest platforms of NFT sales, and it is in 2021 that he joins the international salection of artists on SuperRare.com .
-                        <br />
-                        Currently working on new projects and collaborations, notably in Paris and Jaoan, 2023 will mark the end of a cycle and, like the stages of his various tips around the world, Paris becomes a "stopover" before a new great journer to Reunion Island.
-                    </p>
                 </div>
-                {lukasImages.slice(0, 1).map((image, index) => (
-                    <div key={index} className="page-container__section__item animPic artist">
-                        <img src={image.src} alt={image.title} />
-                        <p className="art-caption">{image.title}</p>
+                <div className="page-container__section artistSliderGallery">
+                    <div className="artistSliderGallery-wrapper">
+                        {[...lukasImages.slice(0), ...lukasImages.slice(0)].map((image, index) => (
+                            <div key={index} className="page-container__section__item animPic artistSlide">
+                                <img src={image.src} alt={image.title} />
+                                <p className="art-caption artist" style={{ fontSize: '1em' }}>{`'${image.title}' `}</p>
+                            </div>
+                        ))}
                     </div>
-                ))}
-            </div>
-            <div className="page-container__section">
-                {lukasImages.slice(2).map((image, index) => (
-                    <div key={index} className="page-container__section__item animPic artist">
-                        <img src={image.src} alt={image.title} />
-                        <p className="art-caption">{image.title}</p>
-                    </div>
-                ))}
+                </div>
             </div>
         </div>
     );

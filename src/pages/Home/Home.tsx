@@ -76,12 +76,9 @@ const Home = () => {
             </div>
             <div className="page-container__section section--content">
                 {images.slice(0, 1).map((image, index) => (
-                    <div
-                        key={index}
-                        className="page-container__section__item animPic first-slice"
-                    >
+                    <div key={index} className="page-container__section__item animPic first-slice">
                         <img src={image.src} alt={image.title} />
-                        <p className="art-caption" style={{fontSize:'1em'}}>{`'${image.title}' by ${image.artist}`}</p>
+                        <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
                     </div>
                 ))}
                 <div className="page-container__section__item">
@@ -123,7 +120,7 @@ const Home = () => {
                     {[...images.slice(2), ...images.slice(2)].map((image, index) => (
                         <div key={index} className="page-container__section__item animPic homeSlide" onClick={() => handleImageClick(image.route)} style={{ cursor: 'pointer' }}>
                             <img src={image.src} alt={image.title} />
-                            <p className="art-caption" style={{fontSize:'1em'}}>{`'${image.title}' by ${image.artist}`}</p>
+                            <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
                         </div>
                     ))}
                 </div>
@@ -162,7 +159,7 @@ const Home = () => {
                             onClick={() => handleImageClick(image.route)} style={{ cursor: 'pointer' }}
                         >
                             <img src={image.src} alt={image.title} />
-                            <p className="art-caption" style={{fontSize:'1em'}}>{`'${image.title}' by ${image.artist}`}</p>
+                            <p className="art-caption" >{`'${image.title}' by ${image.artist}`}</p>
                         </div>
                     ))}
             </div>

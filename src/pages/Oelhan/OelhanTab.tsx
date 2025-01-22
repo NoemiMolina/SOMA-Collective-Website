@@ -36,49 +36,52 @@ const OelhanTab = () => {
             src: require('../../assets/images/OelhanImgs/Anxiety.gif'),
             title: 'Anxiety'
         },
-
     ]
+
     return (
-        <div className="page-container">
-            <div className="page-container__section">
-                <div className="page-container__section__item">
-                    <h1 className="title">Oelhan</h1>
-                    <p className="animator">The Animator</p>
-                    <img src={oelhanImage} alt="Oelhan Img" className="oelhan-image" />
-                    <div className="socials">
-                        <p>socials: @oelhan.tv</p>
-                        <a href="https://www.instagram.com/oelhan.tv/" target="_blank" rel="noopener noreferrer" className="social-icon">
+        <div className="page-container artist">
+            <div className="content-wrapper">
+                <div className="presentation">
+                    <h1 className="animator">The Animator</h1>
+                    <h2 className="title artist"><strong>Oelhan</strong></h2>
+                    <img
+                        src={oelhanImage}
+                        alt="Oelhan img"
+                        style={{ maxWidth: '50%', borderRadius: '2%', marginTop: '2%' }}
+                        className="oelhan-image"
+                    />
+                    <p
+                        className="oelhanPresentation"
+                        style={{ textAlign: "justify", fontSize: "2.5em", maxWidth: '50%', marginLeft: '25%', fontFamily:'Futura Condensed, sans-serif' }}
+                    >
+                        Oelhan, a Paris-based animator, expertly melds 3D elements and striking visuals to explore intricat ehumate emotions, particulary the interplay of conflicting feelings and suppressed passions.
+                        <br />
+                        His work has been featured at renowned animation exhibitions and festivals, with recent emphasis on translating his animated concepts into physical forms, drawing clients from prestigious brands like Apple, Adobe and Spotifiy.
+
+                    </p>
+                    <div className="socials" style={{ fontSize: '2em' }}>
+                        <p><strong>socials: @oelhan.tv</strong></p>
+                        <a href="https://www.instagram.com/oelhan.tv/" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px' }}>
                             <SlSocialInstagram />
                         </a>
-                        <a href="https://x.com/oelhan_tv" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <a href="https://x.com/oelhan_tv" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px' }}>
                             <FaXTwitter />
                         </a>
-                        <a href={`mailto:${mail}`} className="social-icon">
+                        <a href={`mailto:${mail}`} className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px' }}>
                             <MdMailOutline />
                         </a>
                     </div>
-                    <p className="louisDazyPresentation" style={{ textAlign: "justify"}}>
-                    When emotions and sensationsd merge into an animated whirlwind at the boundaries of the human mind...
-                    <br />
-                    Oelhan, a established animator based in Paris, embordies this fusion. His creations skillfully blend 3D elements, constrasting color schemes, and striking visual treatments. His work is a profound exploration of the nuances of human emotions. Specifically, Oelhan delves into conflicting feelings and suppressed passions within us. Through his short animations, he manages to capture this captivating complexity with a playful touch.
-                    <br />
-                    Among his clients are prestigious brands such as Apple, Adobe, and Spotify. His works, some of which are presentend in the form of lenticular printes, have traveled across Europe to renowned animation exhibitions and festivals like Pictoplasma Berli and Motion Motion. Lately, his focus has been on translating his animated concepts into physical mediums.
-                    </p>
                 </div>
-                {oelhanImages.slice(0, 2).map((image, index) => (
-                    <div key={index} className="page-container__section__item animPic artist">
-                        <img src={image.src} alt={image.title} />
-                        <p className="art-caption">{image.title}</p>      
+                <div className="page-container__section artistSliderGallery">
+                    <div className="artistSliderGallery-wrapper">
+                        {[...oelhanImages.slice(0), ...oelhanImages.slice(0)].map((image, index) => (
+                            <div key={index} className="page-container__section__item animPic artistSlide">
+                                <img src={image.src} alt={image.title} />
+                                <p className="art-caption artist" style={{ fontSize: '1em' }}>{`'${image.title}' `}</p>
+                            </div>
+                        ))}
                     </div>
-                ))}
-            </div>
-            <div className="page-container__section">
-                {oelhanImages.slice(2).map((image, index) => (
-                    <div key={index} className="page-container__section__item animPic artist">
-                        <img src={image.src} alt={image.title} />
-                        <p className="art-caption">{image.title}</p>
-                    </div>
-                ))}
+                </div>
             </div>
         </div>
     );
