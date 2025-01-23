@@ -78,7 +78,7 @@
   border-radius: 10px;
 }
 
-.artistSliderGallery-wrapper .art-caption {
+.artistSliderGallery-wrapper .art-caption.artist {
   opacity: 0;
   transform: translateY(20px); 
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -95,7 +95,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.artistSliderGallery-wrapper .artistSlide:hover .art-caption {
+.artistSliderGallery-wrapper .artistSlide:hover .art-caption.artist {
   opacity: 1;
   transform: translateY(0); 
 }
