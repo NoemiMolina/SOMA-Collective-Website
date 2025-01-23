@@ -36,19 +36,19 @@ const LukasTab = () => {
                     <img
                         src={lukasImage}
                         alt="Lukas img"
-                        style={{ maxWidth: '50%', borderRadius: '2%', marginTop: '2%' }}
+                        style={{ maxWidth: '40%', borderRadius: '2%', marginTop: '2%' }}
                         className="lukas-image"
                     />
                     <p
                         className="lukasPresentation"
-                        style={{ textAlign: "justify", fontSize: "2.5em", maxWidth: '50%', marginLeft: '25%', fontFamily: 'Futura Condensed, sans-serif' }}
+                        style={{ textAlign: "justify", fontSize: "1em", maxWidth: '50%', marginLeft: '30%', marginRight: '30%', fontFamily: 'Futura Condensed, sans-serif' }}
                     >
                         Lukas, born in Ivoary Coast and raised in Indonesia and France, discovered his passion for painting and music alongside his academic journey. As a synesthete, he employs colors as his language to externalize his history, sensitivity and visions.
                         <br />
                         His art has been exhibited internationally, and in 2021, he joined the ranks of artists on SuperRare.com, while his creative journey continues with upcoming projects and collaborations in Paris and Japan.
 
                     </p>
-                    <div className="socials" style={{ fontSize: '2em' }}>
+                    <div className="socials" style={{ fontSize: '1em' }}>
                         <p><strong>socials: @lukas.works</strong></p>
                         <a href="https://www.instagram.com/lukas.works/" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px' }}>
                             <SlSocialInstagram />
@@ -66,7 +66,7 @@ const LukasTab = () => {
                         {[...lukasImages.slice(0), ...lukasImages.slice(0)].map((image, index) => (
                             <div key={index} className="page-container__section__item animPic artistSlide">
                                 <img src={image.src} alt={image.title} />
-                                <p className="art-caption artist" style={{ fontSize: '1em' }}>{`'${image.title}' `}</p>
+                                <p className="art-caption artist" style={{bottom:'25%'}}>{`'${image.title}' `}</p>
                             </div>
                         ))}
                     </div>

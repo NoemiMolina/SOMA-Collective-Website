@@ -118,19 +118,19 @@
 
 .painter {
   font-family: "Orbitron", sans-serif;
-  font-size: 1.8em;
+  font-size: 1em;
   color: black;
   text-align: justify;
   margin: 0 auto;
   font-weight: bold;
-  margin-left: 25%;
+  margin-left: 30%;
   margin-bottom: 5px;
 }
 
 .title.artist {
-  font-size: 5em;
+  font-size: 1.5em;
   font-family: "Orbitron", sans-serif;
-  margin-left: 25%;
+  margin-left: 30%;
   margin-top: 0;
   margin-bottom: 10px;
 }

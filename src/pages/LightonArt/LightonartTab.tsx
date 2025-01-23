@@ -40,18 +40,18 @@ const LightonartTab = () => {
                     <img
                         src={lightonImage}
                         alt="Lighton img"
-                        style={{ maxWidth: '50%', borderRadius: '2%', marginTop: '2%' }}
+                        style={{ maxWidth: '40%', borderRadius: '2%', marginTop: '2%' }}
                         className="lighton-image"
                     />
                     <p
                         className="lightonPresentation"
-                        style={{ textAlign: "justify", fontSize: "2.5em", maxWidth: '50%', marginLeft: '25%', fontFamily: 'Futura Condensed, sans-serif' }}
+                        style={{ textAlign: "justify", fontSize: "1em", maxWidth: '50%', marginLeft: '30%', marginRight: '30%', fontFamily: 'Futura Condensed, sans-serif' }}
                     >
                         Meet Lighton, a versatile Paris-based artist with a background in advertising who draws inspiration from torn posters in the metro.
                         <br />
                         His distinctive style features characters with blue skin tones, transcending ethnic origins and uniting humanity under a unique visual language that blends influences from pop art and urban art.
                     </p>
-                    <div className="socials" style={{ fontSize: '2em' }}>
+                    <div className="socials" style={{ fontSize: '1em' }}>
                         <p><strong>socials: @lightonart</strong></p>
                         <a href="https://www.instagram.com/lightonart/" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px' }}>
                             <SlSocialInstagram />
@@ -69,7 +69,7 @@ const LightonartTab = () => {
                         {[...lightonImages.slice(0), ...lightonImages.slice(0)].map((image, index) => (
                             <div key={index} className="page-container__section__item animPic artistSlide">
                                 <img src={image.src} alt={image.title} />
-                                <p className="art-caption artist" style={{ fontSize: '1em' }}>{`'${image.title}' `}</p>
+                                <p className="art-caption artist" style={{bottom:'25%'}}>{`'${image.title}' `}</p>
                             </div>
                         ))}
                     </div>

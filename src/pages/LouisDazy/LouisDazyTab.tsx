@@ -76,9 +76,9 @@ const LouisDazyTab = () => {
                 <div className="page-container__section artistSliderGallery">
                     <div className="artistSliderGallery-wrapper">
                         {[...louisDazyImages.slice(0), ...louisDazyImages.slice(0)].map((image, index) => (
-                            <div key={index} className="page-container__section__item animPic artistSlide" style={{maxWidth:'400px', maxHeight:'550px', marginTop:'1%'}}>
-                                <img src={image.src} alt={image.title} />
-                                <p className="art-caption artist" style={{ fontSize: '0.5em' }}>{`'${image.title}' `}</p>
+                            <div key={index} className="page-container__section__item animPic artistSlide">
+                                <img src={image.src} alt={image.title}/>
+                                <p className="art-caption artist" style={{bottom:'25%'}}>{`'${image.title}' `}</p>
                             </div>
                         ))}
                     </div>
