@@ -46,14 +46,11 @@ const ExhibitionTab = () => {
 
     return (
         <div className="page-container exhibition">
-            {/* <div className="page-container__section section--logo">
-                <div className="page-container__section__item exhibition">
-                    <img src={somalogo} alt="Logo" />
-                </div>
-            </div> */}
             <div className="page-container__section section--presentation exhibition">
                 <div className="page-container__section__item presentation exhibition">
+                    <div className='test'>
                     <h1 className='CollabTitleRecentEvent'>Exhibition and recent events</h1>
+                    </div>
                     <p className='recentEventText'>
                         07/2024 : <strong>NFCC ROME - DIGITAL FESTIVAL (ROMA)</strong><br />
                         06/2024 : <strong>NFC - DIGITAL FESTIVAL (LISBON)</strong><br />
@@ -66,6 +63,14 @@ const ExhibitionTab = () => {
                         02/2024 : <strong>ESPRIT DE CORPS - NFT FACTORY (PARIS)</strong><br />
                         10/2023 : <strong>CHARITABLE SALE (IHAM, PARIS)</strong><br />
                         09/2023 : <strong>SOMAVERSE - NFT FACTORY (PARIS)</strong><br />
+                        <br />
+                        <a
+                            href="/presskit.pdf"
+                            download
+                            className="download-button"
+                        >
+                            Download the SOMA's Presskit here !
+                        </a>
                     </p>
                 </div>
                 {exhibitionsImages.slice(1, 2).map((image, index) => (
@@ -79,7 +84,7 @@ const ExhibitionTab = () => {
                 {exhibitionsImages.slice(0, 1).map((image, index) => (
                     <div key={index} className="page-container__section__item animPic first-slice exhibition">
                         <img src={image.src} alt={image.title} />
-                        <p className="art-caption exhibition">{`'${image.title}'`}</p>
+                        <p className="art-caption exhibition firstSlice" style={{fontSize:'0.5em'}}>{`'${image.title}'`}</p>
                     </div>
                 ))}
                 <div className="page-container__section__item exhibition">
@@ -116,7 +121,7 @@ const ExhibitionTab = () => {
 
             <div className="page-container__section exhibitionSliderGallery">
                 <div className="exhibitionSliderGallery-wrapper">
-                    {[...exhibitionsImages.slice(2,7), ...exhibitionsImages.slice(2,7)].map((image, index) => (
+                    {[...exhibitionsImages.slice(2, 7), ...exhibitionsImages.slice(2, 7)].map((image, index) => (
                         <div key={index} className="page-container__section__item animPic exhibitionSlide">
                             <img src={image.src} alt={image.title} />
                             <p className="art-caption exhibition">{`'${image.title}'`}</p>
@@ -158,13 +163,13 @@ const ExhibitionTab = () => {
                     </p>
 
                 </div>
-                {exhibitionsImages.slice( 8).map((image, index) => (
+                {exhibitionsImages.slice(8).map((image, index) => (
                     <div
                         key={index}
                         className="page-container__section__item animPic last-slice exhibition"
                     >
                         <img src={image.src} alt={image.title} />
-                        <p className="art-caption exhibition" >{`'${image.title}'`}</p>
+                        <p className="art-caption exhibition lastSlice" style={{fontSize:'0.5em'}}>{`'${image.title}'`}</p>
                     </div>
                 ))}
             </div>

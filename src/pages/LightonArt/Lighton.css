@@ -135,31 +135,26 @@
   margin-bottom: 10px;
 }
 
-.art-caption.artist {
+.art-caption.lighton {
   position: absolute;
-  top: 63%; 
-  left: 5%;
-  transform: translateX(-50%, -50%);
-  font-size: 0.5em; 
-  text-align: center;
-  word-wrap: break-word;
-  background-color: rgba(244, 237, 222, 0.8);
-  padding: 0.1em 0.2em;
-  border-radius: 5px;
-  max-width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  overflow: hidden; 
-  word-wrap: break-word;
-  white-space: normal; 
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  opacity: 0;
+  max-width: 100%; 
+  text-align: center; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  word-wrap: break-word; 
+  border-radius: 10%;
 }
 
-
-.artist-container__section__item:hover .art-caption.artist {
-  opacity: 1;
-  transform: translateY(0);
-  border-radius: 10px;
+.animPic:hover .art-caption.lighton {
+  opacity: 1; 
 }
-
 
 @media (max-width: 768px) {
   .artist-container__section {
@@ -172,7 +167,7 @@
     max-width: 80%;
   }
 
-  .art-caption.artist {
+  .art-caption.lighton {
     font-size: 1em;
   }
 }

@@ -78,26 +78,26 @@
   border-radius: 10px;
 }
 
-.artistSliderGallery-wrapper .art-caption.artist {
-  opacity: 0;
-  transform: translateY(20px); 
-  transition: opacity 0.3s ease, transform 0.3s ease;
+
+.art-caption.dazy {
   position: absolute;
-  bottom: 40%; 
-  left: 50%; 
+  bottom: 10%;
+  left: 50%;
   transform: translateX(-50%);
-  font-size: 0.5em; 
-  text-align: center;
-  background-color: rgba(244, 237, 222, 0.8);
-  padding: 0.1em 0.4em;
-  border-radius: 5px;
-  max-width: 10%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  opacity: 0;
+  max-width: 100%; 
+  text-align: center; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  word-wrap: break-word; 
+  border-radius: 10%;
 }
 
-.artistSliderGallery-wrapper .artistSlide:hover .art-caption.artist {
-  opacity: 1;
-  transform: translateY(0); 
+.animPic:hover .art-caption.dazy {
+  opacity: 1; 
 }
 
 
@@ -160,32 +160,6 @@
   margin-bottom: 10px;
 }
 
-.art-caption.artist {
-  position: absolute;
-  top: 63%;
-  left: 5%;
-  transform: translateX(-50%, -50%);
-  font-size: 0.5em;
-  text-align: center;
-  word-wrap: break-word;
-  background-color: rgba(244, 237, 222, 0.8);
-  padding: 0.1em 0.2em;
-  border-radius: 5px;
-  max-width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  word-wrap: break-word;
-  white-space: normal;
-}
-
-
-.artist-container__section__item:hover .art-caption.artist {
-  opacity: 1;
-  transform: translateY(0);
-  border-radius: 10px;
-}
-
-
 @media (max-width: 768px) {
   .artist-container__section {
     flex-direction: column;
@@ -197,25 +171,25 @@
     max-width: 80%;
   }
 
-  .art-caption.artist {
+  .art-caption.dazy {
     font-size: 1em;
   }
 }
 @media (max-width: 768px) {
   .artistSlide {
-      width: 80%; /* Adapte les images à l'écran */
-      margin: 0 auto; /* Centre les images */
+      width: 80%; 
+      margin: 0 auto; 
   }
 
   .artistSlide {
-      margin: 0; /* Réduit les marges inutiles */
+      margin: 0; 
       padding: 0;
   }
 }
 
 @media (max-width: 480px) {
   .artistSliderGallery-wrapper img {
-      width: 100%; /* Utilise toute la largeur disponible */
+      width: 100%; 
       height: auto;
   }
 }

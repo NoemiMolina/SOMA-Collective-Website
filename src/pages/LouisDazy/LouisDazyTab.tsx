@@ -62,13 +62,13 @@ const LouisDazyTab = () => {
                     </p>
                     <div className="socials" style={{fontSize: '1em'}}>
                         <p><strong>socials: @louisdazy</strong></p>
-                        <a href="https://www.instagram.com/louisdazy/" target="_blank" rel="noopener noreferrer" className="social-icon" style={{fontSize: '1em', margin: '0 20px'}}>
+                        <a href="https://www.instagram.com/louisdazy/" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px', color:'black'}}>
                             <SlSocialInstagram />
                         </a>
-                        <a href="https://x.com/LouisDazy" target="_blank" rel="noopener noreferrer" className="social-icon" style={{fontSize: '1em', margin: '0 20px'}}>
+                        <a href="https://x.com/LouisDazy" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px', color:'black'}}>
                             <FaXTwitter />
                         </a>
-                        <a href={`mailto:${mail}`} className="social-icon" style={{fontSize: '1em', margin: '0 20px'}}>
+                        <a href={`mailto:${mail}`} className="social-icon" style={{ fontSize: '1.5em', margin: '0 20px', color:'black'}}>
                             <MdMailOutline />
                         </a>
                     </div>
@@ -78,7 +78,7 @@ const LouisDazyTab = () => {
                         {[...louisDazyImages.slice(0), ...louisDazyImages.slice(0)].map((image, index) => (
                             <div key={index} className="page-container__section__item animPic artistSlide">
                                 <img src={image.src} alt={image.title}/>
-                                <p className="art-caption artist" style={{bottom:'25%'}}>{`'${image.title}' `}</p>
+                                <p className="art-caption dazy" style={{bottom:'25%', fontSize:'0.5em'}}>{`'${image.title}' `}</p>
                             </div>
                         ))}
                     </div>

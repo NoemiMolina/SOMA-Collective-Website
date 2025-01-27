@@ -68,6 +68,13 @@ const Home = () => {
                 <div className="page-container__section__item home">
                     <img src={somalogo} alt="Logo" />
                 </div>
+                <a
+                            href="/presskit.pdf"
+                            download
+                            className="download-button-home"
+                        >
+                            Download the SOMA's Presskit here !
+                        </a>
             </div>
             <div className="page-container__section section--presentation">
                 <div className="page-container__section__item presentation">
@@ -76,9 +83,9 @@ const Home = () => {
             </div>
             <div className="page-container__section section--content">
                 {images.slice(0, 1).map((image, index) => (
-                    <div key={index} className="page-container__section__item animPic first-slice">
+                    <div key={index} className="page-container__section__item animPic first-slice" onClick={() => handleImageClick(image.route)} style={{ cursor: 'pointer' }}>
                         <img src={image.src} alt={image.title} />
-                        <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
+                        <p className="art-caption home">{`'${image.title}' by ${image.artist}`}</p>
                     </div>
                 ))}
                 <div className="page-container__section__item">
@@ -120,7 +127,7 @@ const Home = () => {
                     {[...images.slice(2), ...images.slice(2)].map((image, index) => (
                         <div key={index} className="page-container__section__item animPic homeSlide" onClick={() => handleImageClick(image.route)} style={{ cursor: 'pointer' }}>
                             <img src={image.src} alt={image.title} />
-                            <p className="art-caption">{`'${image.title}' by ${image.artist}`}</p>
+                            <p className="art-caption home">{`'${image.title}' by ${image.artist}`}</p>
                         </div>
                     ))}
                 </div>
@@ -155,11 +162,12 @@ const Home = () => {
                 {images.slice(1, 2).map((image, index) => (
                         <div
                             key={index}
-                            className="page-container__section__item animPic last-slice"
+                            className="page-container__section__item animPic last-slice" 
                             onClick={() => handleImageClick(image.route)} style={{ cursor: 'pointer' }}
+                          
                         >
                             <img src={image.src} alt={image.title} />
-                            <p className="art-caption" >{`'${image.title}' by ${image.artist}`}</p>
+                            <p className="art-caption home" >{`'${image.title}' by ${image.artist}`}</p>
                         </div>
                     ))}
             </div>
