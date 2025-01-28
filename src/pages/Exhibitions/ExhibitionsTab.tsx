@@ -49,7 +49,7 @@ const ExhibitionTab = () => {
             <div className="page-container__section section--presentation exhibition">
                 <div className="page-container__section__item presentation exhibition">
                     <div className='test'>
-                    <h1 className='CollabTitleRecentEvent'>Exhibition and recent events</h1>
+                        <h1 className='CollabTitleRecentEvent'>Exhibition and recent events</h1>
                     </div>
                     <p className='recentEventText'>
                         07/2024 : <strong>NFCC ROME - DIGITAL FESTIVAL (ROMA)</strong><br />
@@ -84,7 +84,7 @@ const ExhibitionTab = () => {
                 {exhibitionsImages.slice(0, 1).map((image, index) => (
                     <div key={index} className="page-container__section__item animPic first-slice exhibition">
                         <img src={image.src} alt={image.title} />
-                        <p className="art-caption exhibition firstSlice" style={{fontSize:'0.5em'}}>{`'${image.title}'`}</p>
+                        <p className="art-caption exhibition">{`'${image.title}'`}</p>
                     </div>
                 ))}
                 <div className="page-container__section__item exhibition">
@@ -169,7 +169,7 @@ const ExhibitionTab = () => {
                         className="page-container__section__item animPic last-slice exhibition"
                     >
                         <img src={image.src} alt={image.title} />
-                        <p className="art-caption exhibition lastSlice" style={{fontSize:'0.5em'}}>{`'${image.title}'`}</p>
+                        <p className="art-caption exhibition lastSlice" style={{ fontSize: '0.5em' }}>{`'${image.title}'`}</p>
                     </div>
                 ))}
             </div>
