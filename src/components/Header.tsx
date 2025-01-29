@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
+import { HiOutlineEnvelope } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
@@ -14,15 +15,17 @@ const Header = () => {
     };
 
     const handleNavigation = (path: string) => {
-        setIsMenuOpen(false); 
+        setIsMenuOpen(false);
         setIsArtistsDropdownOpen(false);
         navigate(path);
     };
-    
+
 
     const toggleArtistsDropdown = () => {
         setIsArtistsDropdownOpen(!isArtistsDropdownOpen);
     };
+
+    const mail = 'somacollective75@gmail.com';
 
     return (
         <header className="header">
@@ -34,8 +37,8 @@ const Header = () => {
                     <div className="menu-item" onClick={() => handleNavigation("/")}>
                         Home
                     </div>
-                    <div 
-                        className="menu-item" 
+                    <div
+                        className="menu-item"
                         onClick={toggleArtistsDropdown}
                     >
                         Artists
@@ -53,6 +56,11 @@ const Header = () => {
                     </div>
                 </div>
             )}
+            <div className="contact-button">
+                <a href={`mailto:${mail}`} className="contact-link">
+                    Contact us
+                </a>
+            </div>
         </header>
     );
 };

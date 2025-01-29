@@ -68,13 +68,6 @@ const Home = () => {
                 <div className="page-container__section__item home">
                     <img src={somalogo} alt="Logo" />
                 </div>
-                <a
-                            href="/presskit.pdf"
-                            download
-                            className="download-button-home"
-                        >
-                            Download the SOMA's Presskit here !
-                        </a>
             </div>
             <div className="page-container__section section--presentation">
                 <div className="page-container__section__item presentation">

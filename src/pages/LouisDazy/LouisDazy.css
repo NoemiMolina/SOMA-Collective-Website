@@ -168,28 +168,20 @@
 
 @media (max-width: 480px) {
   .louisDazy-image {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .art-caption.dazy {
-    font-size: 1em;
-  }
-}
-@media (max-width: 768px) {
-  .artistSlide {
-      width: 80%; 
-      margin: 0 auto; 
+    font-size: 5em;
   }
 
   .artistSlide {
-      margin: 0; 
-      padding: 0;
+    width: 250px;
+    height: 300px;
+    margin: 0 5px;
   }
-}
 
-@media (max-width: 480px) {
-  .artistSliderGallery-wrapper img {
-      width: 100%; 
-      height: auto;
+  .presentation {
+    font-size: 0.8em;
   }
 }

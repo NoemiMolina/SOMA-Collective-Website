@@ -69,7 +69,7 @@ const ExhibitionTab = () => {
                             download
                             className="download-button"
                         >
-                            Download the SOMA's Presskit here !
+                            Download the presskit
                         </a>
                     </p>
                 </div>
@@ -90,9 +90,6 @@ const ExhibitionTab = () => {
                 <div className="page-container__section__item exhibition">
                     <h1 className='CollabTitle'>Collaboration Opportunity</h1>
                     <p className='presentationText exhibition'>
-                        The SOMA Collective is a dynamic group of talented artists dedicated to promoting contemporary art and creating unique cultural experiences. We believe in the synergy between art and business, offering exclusive collaboration opportunities for brands that share our creative and innovative vision.
-                        <br />
-                        <br />
                         <strong>WHY COLLABORATE WITH SOMA?</strong>
                         <br />
                         <br />

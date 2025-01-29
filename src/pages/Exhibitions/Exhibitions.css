@@ -11,19 +11,20 @@
 .presentationEnd.exhibition,
 .recentEventText {
     text-align: justify;
-    font-size: 0.5em;
-    margin: 1em 0;
     padding: 0 5%;
     box-sizing: border-box;
-    margin-top: -1%;
+    margin-top: 1%;
 }
 
 .recentEventText {
-    border: 2px solid black;
+    border: 3px solid black;
     background-color: transparent;
     color: black;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 55px;
+    box-shadow: inset 5em 1em gold;
+    line-height: 160%;
+    font-size: 0.5em;
 }
 
 .download-button {
@@ -34,9 +35,9 @@
     color: black;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1.2em;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    margin-left: 10%;
+    margin-left: 20%;
 }
 
 .download-button:hover {
@@ -84,13 +85,27 @@
 }
 
 .animPic.exhibition.first-slice img {
-    margin-left: 50%;
-    margin-top: 20%;
+    width: 500px;
+    height: auto;
+    margin: 0 10px;
+    margin-left: 15%;
+    margin-top: 3%;
+
 }
 
 .animPic.exhibition.last-slice img {
-    margin-right: 50%;
+    width: 500px;
+    height: auto;
+    margin: 0 10px;
+    margin-right: 40%;
     margin-top: 3%;
+}
+
+.animPic.exhibition.right-slice img {
+    margin-right: 30%;
+    margin-top: 3%;
+    width: 1100px;
+    height: auto;
 }
 
 .exhibitionSliderGallery {
@@ -108,7 +123,7 @@
 
 .exhibitionSlide img {
     flex-shrink: 0;
-    width: 300px;
+    width: 500px;
     height: auto;
     margin: 0 10px;
     border-radius: 10px;
@@ -122,12 +137,15 @@
     border-radius: 10px;
 }
 
-.CollabTitle,
+.CollabTitle {
+    margin-right: 60%;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 .CollabTitleRecentEvent {
-    text-align: center;
     font-size: 1.5em;
     font-weight: bold;
-    margin: 1em 0;
 }
 
 .art-caption.exhibition {
@@ -153,7 +171,7 @@
 }
 
 .last-slice .art-caption.exhibition {
-    bottom: 20%;
+    bottom: 40%;
     text-align: center;
     left: 25%
 }
@@ -163,7 +181,6 @@
     opacity: 1;
 }
 
-/* Media Queries */
 @media (max-width: 1200px) {
 
     .CollabTitle,
@@ -180,7 +197,7 @@
     .presentationText.exhibition,
     .presentationEnd.exhibition,
     .recentEventText {
-        font-size: 0.9em;
+        font-size: 0.5em;
         padding: 0 3%;
     }
 
@@ -189,27 +206,80 @@
         font-size: 1em;
     }
 
-    .exhibitionSlide {
-        width: 200px;
+    .animPic.exhibition.right-slice img {
+        max-width: 100%;
+        margin-left: 35%;
     }
+
+    .animPic.exhibition.first-slice img {
+        max-width: 90%;
+        margin-left: 5%;
+    }
+
+    .animPic.exhibition.last-slice img {
+        max-width: 100%;
+        margin-left: 43%;
+    }
+
+    .recentEventText {
+        border: 2px solid black;
+        background-color: transparent;
+        color: black;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: inset 5em 1em gold;
+        line-height: 160%;
+        font-size: 0.4em;
+    }
+
 }
 
 @media (max-width: 480px) {
+    .page-container__section.exhibition {
+        flex-direction: column;
+    }
 
     .presentationText.exhibition,
     .presentationEnd.exhibition,
     .recentEventText {
-        font-size: 0.8em;
-        padding: 0 2%;
+        font-size: 0.5em;
+        padding: 0 3%;
     }
 
-    .CollabTitle,
+    .CollabTitle {
+        font-size: 1em;
+    }
+
     .CollabTitleRecentEvent {
-        font-size: 0.9em;
+        font-size: 2em
     }
 
-    .exhibitionSlide {
-        width: 150px;
+    .animPic.exhibition.right-slice img {
+        max-width: 90%;
+        margin-left: 25%;
+    }
+
+    .animPic.exhibition.first-slice img {
+        max-width: 70%;
+        margin-left: 3%;
+    }
+
+    .animPic.exhibition.last-slice img {
+        width: 500%;
+        margin-left: 30%;
+        margin-bottom: 100%;
+        margin-top: -20%;
+    }
+
+    .recentEventText {
+        border: 2px solid black;
+        background-color: transparent;
+        color: black;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: inset 5em 1em gold;
+        line-height: 160%;
+        font-size: 1em;
     }
 }
 
