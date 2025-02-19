@@ -138,7 +138,7 @@
 }
 
 .CollabTitle {
-    margin-right: 60%;
+    margin-right: 5%;
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -217,8 +217,7 @@
     }
 
     .animPic.exhibition.last-slice img {
-        max-width: 100%;
-        margin-left: 43%;
+        max-width: 70%;
     }
 
     .recentEventText {
@@ -240,10 +239,14 @@
     }
 
     .presentationText.exhibition,
-    .presentationEnd.exhibition,
     .recentEventText {
         font-size: 0.5em;
         padding: 0 3%;
+    }
+
+    .presentationEnd.exhibition {
+        font-size: 0.5em;
+        padding-bottom: 50%;
     }
 
     .CollabTitle {
@@ -255,20 +258,23 @@
     }
 
     .animPic.exhibition.right-slice img {
-        max-width: 90%;
+        width: 150%;
+        max-width: 100%;
         margin-left: 25%;
     }
 
     .animPic.exhibition.first-slice img {
-        max-width: 70%;
+        width: 150%;
+        max-width: 100%;
         margin-left: 3%;
     }
 
     .animPic.exhibition.last-slice img {
-        width: 500%;
-        margin-left: 30%;
-        margin-bottom: 100%;
-        margin-top: -20%;
+        width: 150%;
+        max-width: 100%;
+        margin-left: 40%;
+        margin-bottom: 110%;
+        margin-top: -70%;
     }
 
     .recentEventText {

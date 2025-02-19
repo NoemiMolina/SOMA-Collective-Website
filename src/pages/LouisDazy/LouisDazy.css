@@ -164,6 +164,7 @@
   .artist-container__section {
     flex-direction: column;
   }
+  
 }
 
 @media (max-width: 480px) {
