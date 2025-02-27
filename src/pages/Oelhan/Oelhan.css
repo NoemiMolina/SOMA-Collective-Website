@@ -161,6 +161,37 @@
   .artist-container__section {
     flex-direction: column;
   }
+
+  .art-caption.oelhan {
+    position: static; /* Change from absolute to static */
+    transform: none; /* Remove transform */
+    opacity: 1; /* Ensure the caption is always visible */
+    background-color: transparent; /* Remove background color */
+    color: black; /* Change text color for better readability */
+    padding: 10px 0; /* Adjust padding */
+    white-space: normal; /* Ensure text wraps properly */
+    text-align: center; /* Center-align text */
+    word-wrap: break-word; /* Ensure long words break */
+    overflow: visible; /* Ensure text is visible */
+    margin-top: 10px; /* Add margin to separate caption from image */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  .animPic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .animPic img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .animPic:hover .art-caption.oelhan {
+    opacity: 1; 
+  }
 }
 
 @media (max-width: 480px) {
@@ -169,6 +200,16 @@
   }
 
   .art-caption.oelhan {
-    font-size: 1em;
+    font-size: 1em; 
+  }
+
+  .artistSlide {
+    width: 250px;
+    height: 300px;
+    margin: 0 5px;
+  }
+
+  .presentation {
+    font-size: 0.8em;
   }
 }

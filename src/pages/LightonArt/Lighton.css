@@ -160,6 +160,37 @@
   .artist-container__section {
     flex-direction: column;
   }
+
+  .art-caption.lighton {
+    position: static;
+    transform: none; 
+    opacity: 1; 
+    background-color: transparent; 
+    color: black; 
+    padding: 10px 0; 
+    white-space: normal;
+    text-align: center; 
+    word-wrap: break-word; 
+    overflow: visible; 
+    margin-top: 10px; 
+    border-radius: 0; 
+  }
+
+  .animPic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .animPic img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .animPic:hover .art-caption.lighton {
+    opacity: 1; 
+  }
 }
 
 @media (max-width: 480px) {
@@ -169,5 +200,15 @@
 
   .art-caption.lighton {
     font-size: 1em;
+  }
+
+  .artistSlide {
+    width: 250px;
+    height: 300px;
+    margin: 0 5px;
+  }
+
+  .presentation {
+    font-size: 0.8em;
   }
 }
