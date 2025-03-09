@@ -40,12 +40,12 @@ const LukasTab = () => {
                     <img
                         src={lukasImage}
                         alt="Lukas img"
-                        style={{ maxWidth: '40%', borderRadius: '2%', marginTop: '2%' }}
+                    
                         className="lukas-image"
                     />
                     <p
                         className="lukasPresentation"
-                        style={{ textAlign: "justify", fontSize: "1em", maxWidth: '50%', marginLeft: '30%', marginRight: '30%', fontFamily: 'Futura Condensed, sans-serif' }}
+                     
                     >
                         Lukas, born in Ivoary Coast and raised in Indonesia and France, discovered his passion for painting and music alongside his academic journey. As a synesthete, he employs colors as his language to externalize his history, sensitivity and visions.
                         <br />

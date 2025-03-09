@@ -47,12 +47,11 @@ const LouisDazyTab = () => {
                     <img
                         src={louisDazyImage}
                         alt="Louis Dazy img"
-                        style={{ maxWidth: '40%', borderRadius: '2%', marginTop: '2%' }}
+            
                         className="louisDazy-image"
                     />
                     <p
                         className="louisDazyPresentation"
-                        style={{ textAlign: "justify", fontSize: "1em", maxWidth: '50%', marginLeft: '30%', marginRight: '30%', fontFamily: 'Futura Condensed, sans-serif' }}
                     >
                         Louis Dazy, a Paris-based conceptual photographer and visual artist, skillfully blends portraiture, street photography, and light manipulation to craft evocative, cinematic images.
                         <br />

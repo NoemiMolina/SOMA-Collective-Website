@@ -40,12 +40,12 @@ const LightonartTab = () => {
                     <img
                         src={lightonImage}
                         alt="Lighton img"
-                        style={{ maxWidth: '40%', borderRadius: '2%', marginTop: '2%' }}
+                  
                         className="lighton-image"
                     />
                     <p
                         className="lightonPresentation"
-                        style={{ textAlign: "justify", fontSize: "1em", maxWidth: '50%', marginLeft: '30%', marginRight: '30%', fontFamily: 'Futura Condensed, sans-serif' }}
+      
                     >
                         Meet Lighton, a versatile Paris-based artist with a background in advertising who draws inspiration from torn posters in the metro.
                         <br />

@@ -150,19 +150,17 @@
 
 .art-caption.exhibition {
     position: absolute;
-    bottom: 10%;
-    left: 50%;
+    bottom: 20px;
     transform: translateX(-50%);
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px;
+    padding: 10px;
     opacity: 0;
     max-width: 100%; 
-    text-align: center; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
-    word-wrap: break-word; 
-    border-radius: 10%;
+    text-align: center;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    font-size: 0.5em
 }
 
 .first-slice .art-caption.exhibition {
@@ -269,7 +267,7 @@
     }
 
     .CollabTitleRecentEvent {
-        font-size: 2em
+        font-size: 1em
     }
 
     .animPic.exhibition.right-slice img {
@@ -300,7 +298,7 @@
         padding: 15px;
         box-shadow: inset 5em 1em gold;
         line-height: 160%;
-        font-size: 1em;
+        font-size: 0.5em;
     }
 
     .page-container__section__item.animPic.exhibitionSlide {

@@ -47,12 +47,10 @@ const OelhanTab = () => {
                     <img
                         src={oelhanImage}
                         alt="Oelhan img"
-                        style={{ maxWidth: '40%', borderRadius: '2%', marginTop: '2%' }}
                         className="oelhan-image"
                     />
                     <p
                         className="oelhanPresentation"
-                        style={{ textAlign: "justify", fontSize: "1em", maxWidth: '50%', marginLeft: '30%', marginRight: '30%', fontFamily: 'Futura Condensed, sans-serif' }}
                     >
                         Oelhan, a Paris-based animator, expertly melds 3D elements and striking visuals to explore intricat ehumate emotions, particulary the interplay of conflicting feelings and suppressed passions.
                         <br />

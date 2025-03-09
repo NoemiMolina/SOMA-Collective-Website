@@ -1,0 +1,185 @@
+[33mcommit 6815ee33c057462faa238a9372dc86e0e2afb934[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Thu Feb 27 18:05:59 2025 +0100
+
+    huge improvment on css s responsiveness
+
+[33mcommit 5f476ab070a4a1411ddd7df245e2314e1360abff[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Wed Feb 19 17:19:57 2025 +0100
+
+    some css improvments on exhibition page
+
+[33mcommit 56ccf7cfceafa174ca3f1e62520ea6b40508539c[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Wed Jan 29 16:49:55 2025 +0100
+
+    responsiveness improvment, exhibition page improved
+
+[33mcommit 248165de5137e1b28c91072deac58fbc27fec123[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Tue Jan 28 17:24:38 2025 +0100
+
+    responsiveness and css improvments on exhibition page
+
+[33mcommit 486c69b901431b785d8b50c5e2d8893615e6e010[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Mon Jan 27 17:35:00 2025 +0100
+
+    improvment but not cleaned
+
+[33mcommit b0696f48d44b6766319b9e4334a60e88b302bdae[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Thu Jan 23 17:05:42 2025 +0100
+
+    exhibition page starting
+
+[33mcommit a81a6a4eb72ee1ecdad176bf971e326c5ad7d532[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Thu Jan 23 14:48:27 2025 +0100
+
+    sizing problems seem to be solved and responsive
+
+[33mcommit 8abe6b525b50be7c5ed41b496998fc740d8fc229[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Wed Jan 22 17:32:45 2025 +0100
+
+    improvment and size changings because im dumb
+
+[33mcommit 5089a779ca968bcfcd4aad67af2abc2660c1a994[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Tue Jan 21 19:39:11 2025 +0100
+
+    artist page made need return
+
+[33mcommit 40a1ee41ece1cee5d74c13e5af1e216db1ada69b[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Mon Jan 20 18:55:55 2025 +0100
+
+    home page looking good
+
+[33mcommit d1286bdb9e141c5e7be4c1a4d4d6dd138dd77478[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Fri Jan 17 17:41:32 2025 +0100
+
+    improvments
+
+[33mcommit e60718d8277e644273ab6bf99d62d560df6d8bfd[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Thu Jan 16 16:08:25 2025 +0100
+
+    menu is improved, starting exhibitions and events page
+
+[33mcommit cc28a89c065cc1fdb2ab96604e06d460186835e7[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Tue Jan 14 17:49:01 2025 +0100
+
+    problem with mirrored imgs solved
+
+[33mcommit c909c9763be49cda0bbbc56187b5cf773248ae19[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Tue Jan 14 16:35:54 2025 +0100
+
+    imgs and gifs are in mirror effects
+
+[33mcommit 86af56d03506f603077a95967f8fcf1192927791[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Mon Jan 13 17:29:33 2025 +0100
+
+    improvments
+
+[33mcommit eb6beac767c0be8637cf047c02cde60f65a180d7[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Sun Jan 12 13:21:59 2025 +0100
+
+    Remove .gitattributes
+
+[33mcommit ee7f7d91cbec5d25f392b928ccaa15974685312b[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Sun Jan 12 13:11:59 2025 +0100
+
+    keep trying to improve the home page
+
+[33mcommit 27508c56f649d3c0941e0cf4df8614713e09be06[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Fri Jan 10 14:58:40 2025 +0100
+
+    trying to push with a .mp4 file which appears to be too big
+
+[33mcommit e0c6cc911ede51ba4ae8819aee69295956f06482[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Thu Jan 9 17:57:10 2025 +0100
+
+    wip homepage improvement
+
+[33mcommit 426ce456dfc6e00277a82dc06725e3bbbadd27d7[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Tue Jan 7 17:57:59 2025 +0100
+
+    Add Hypnoz.mp4 with Git LFS
+
+[33mcommit 98c8a058512d71606781d5e3077e351502d84565[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Tue Jan 7 17:57:23 2025 +0100
+
+    Track .mp4 files with Git LFS
+
+[33mcommit 610591de7f0e9f58289c6c9cd1b1c974d3636bea[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Tue Jan 7 17:57:09 2025 +0100
+
+    Remove large file Hypnoze from git history
+
+[33mcommit fd8ecea59a55d751bd89a393c0b41a9f33b54cf6[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Tue Jan 7 17:50:48 2025 +0100
+
+    ui improved on artists, home in progress
+
+[33mcommit d320bdd1c5773b10c302eb428d3605c87cf66099[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Mon Jan 6 17:11:23 2025 +0100
+
+    louis and polygon tab in progress, need return to make the others
+
+[33mcommit 3bfcc83c00c1c4e96d295198a50e1f6797531e2d[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Mon Jan 6 14:45:34 2025 +0100
+
+    Home page fine for now, return needed
+
+[33mcommit 70a7733a7ea30443ac814bcc416d29890ce5d406[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Fri Dec 13 15:55:00 2024 +0100
+
+    improvements on CSS
+
+[33mcommit 3ff39808071714066fa5f1229f09da98e7b0fe1b[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Mon Dec 9 16:37:53 2024 +0100
+
+    all artists tabs created, css not done
+
+[33mcommit fc9cdc2b35c04288556dc413b4932ca7270f5515[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Thu Dec 5 11:56:23 2024 +0100
+
+    polygon tab started
+
+[33mcommit ef79b577e89c5b060bb5c621c178178cdc83fe1e[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Tue Dec 3 17:05:06 2024 +0100
+
+    modifications, css improved, presentation text added
+
+[33mcommit 73a40594c5ec476c0da1f1a73af5e25c7a13ac30[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Thu Nov 28 17:03:12 2024 +0100
+
+    first commit
+
+[33mcommit 4852877d24323bdf1f0ab30c54f91652b02892d5[m
+Author: NoemiMolina <molinanoemi5@gmail.com>
+Date:   Thu Nov 28 13:46:10 2024 +0100
+
+    Initialize project using Create React App
