@@ -142,7 +142,10 @@ const Home = () => {
                         world where creativity knows no bounds, and where
                         art serves as a bridge that unites us all.
                         <br />
-                        In a world where the boundaries between the tangible and the virtual continue to blur, SOMA Collective embraces this transformation as an opportunity for exploration.                     
+                        In a world where the boundaries between the tangible and the virtual continue to blur, SOMA Collective embraces this transformation as an opportunity for exploration.
+                        <br />
+                        <br />
+                        (NB : Please note that the artist Polygon1993 is no longer a member of 'Soma Collective'. But since he has been part of the collective's family, you can see his work 'Impala' on the slider above)                 
                     </p>
 
                 </div>

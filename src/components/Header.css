@@ -2,14 +2,27 @@
     font-family: "Futura Condensed", sans-serif;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    padding: 20px;
+    justify-content: space-between;
+    padding: 50px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     font-size: 15px;
     z-index: 1000;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .menu-button {
@@ -73,7 +86,7 @@
 .contact-button {
     position: absolute;
     right: 7%;
-    top: 50%;
+    top: 30%;
 }
 
 .contact-link {
@@ -95,11 +108,11 @@
 }
 
 .logo-container {
-    flex-grow: 1; 
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 5px;
+    top: 25px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 980;
@@ -108,12 +121,13 @@
     height: fit-content;
     padding: 0 !important;
     margin: 0 !important;
-    background: transparent;
+
 }
 
 .logo {
     height: 70px;
     text-align: center;
+
 }
 
 
@@ -126,7 +140,7 @@
         width: 15px;
         height: 15px;
     }
-    
+
 
     .menu-item {
         padding: 2px;
@@ -134,7 +148,7 @@
         transition: background-color 0.3s ease;
         font-size: 1em;
     }
-       
+
     .sub-menu-list {
         list-style-type: none;
         padding: 0;
@@ -145,7 +159,7 @@
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    
+
     .sub-menu-item {
         padding: 5px;
         cursor: pointer;
@@ -158,7 +172,7 @@
         right: 9%;
         top: 50%;
     }
-    
+
     .contact-link {
         display: inline-block;
         padding: 4px 8px;
@@ -178,23 +192,26 @@
 }
 
 @media (max-width: 480px) {
+
+    .header {
+        padding: 30px; /* Ajuste la taille sans trop impacter les éléments */
+    }
+
     .menu-button {
         cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 10px;
         height: 10px;
+        align-self: center;
 
     }
-    
+
     .menu-item {
         padding: 2px;
         cursor: pointer;
         transition: background-color 0.3s ease;
         font-size: 1em;
     }
-       
+
     .sub-menu-list {
         list-style-type: none;
         padding: 0;
@@ -205,7 +222,7 @@
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    
+
     .sub-menu-item {
         padding: 5px;
         cursor: pointer;
@@ -215,10 +232,10 @@
 
     .contact-button {
         position: absolute;
-        right: 12%;
-        top: -40%;
+        right: 15%;
+        top: -45%;
     }
-    
+
     .contact-link {
         display: inline-block;
         padding: 2px 3px;
@@ -237,4 +254,3 @@
     }
 
 }
-
