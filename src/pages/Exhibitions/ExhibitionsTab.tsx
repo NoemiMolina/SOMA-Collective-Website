@@ -166,7 +166,7 @@ const ExhibitionTab = () => {
                         className="page-container__section__item animPic last-slice exhibition"
                     >
                         <img src={image.src} alt={image.title} />
-                        <p className="art-caption exhibition lastSlice" style={{ fontSize: '0.5em' }}>{`'${image.title}'`}</p>
+                        <p className="art-caption exhibition lastSlice" >{`'${image.title}'`}</p>
                     </div>
                 ))}
             </div>

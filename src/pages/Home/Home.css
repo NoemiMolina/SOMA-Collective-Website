@@ -26,6 +26,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .page-container__section__item.presentation img {
@@ -42,9 +43,10 @@
 }
 
 .page-container__section__item.home img {
-  max-width: 100%;
+  max-width: 900%;
   height: auto;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .animPic {
@@ -56,6 +58,7 @@
   width: 800px;
   height: 700px;
   object-fit: cover;
+  overflow: hidden;
   border-radius: 10px;
 }
 
@@ -65,8 +68,7 @@
   margin-top: 5%;
   width: 350px;
   height: 350px;
-  object-fit: cover;
-  border-radius: 10px;
+  border-radius: 10px !important;
   overflow: hidden;
   padding-bottom: 5%;
 }
@@ -76,6 +78,7 @@
   opacity: 0.8;
   border-radius: 10px;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  overflow: hidden;
 }
 
 .animPic:hover .art-caption.home {
@@ -295,7 +298,6 @@
  
   }
 
-
   .page-container__section__item.animPic.home {
     width: 90%;
     height: auto;
@@ -314,12 +316,6 @@
     width: 100%;
     font-size: 1.2em;
     margin-top: -30%;
-  }
-
-  .contact-button {
-    position: relative;
-    z-index: 990;
-    margin-top: 50px;
   }
 
   .page-container__section.home {

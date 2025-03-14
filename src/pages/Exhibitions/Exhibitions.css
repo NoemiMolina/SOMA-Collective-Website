@@ -282,7 +282,7 @@
     }
 
     .animPic.exhibition.last-slice img {
-        width: 150%;
+        width: 100%;
         max-width: 100%;
         margin-left: 40%;
         margin-top: -70%;
@@ -325,6 +325,12 @@
     .art-caption.exhibition {
         font-size: 0.5em;
     }
+
+    .last-slice .art-caption.exhibition {
+        font-size: 0.5em;
+        margin-bottom: 15%
+    }
+
 }
 
 @keyframes scroll {
