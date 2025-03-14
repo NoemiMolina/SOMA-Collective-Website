@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
+import logo from '../assets/somalogo/logo.svg';
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
@@ -56,6 +57,9 @@ const Header = () => {
                     </div>
                 </div>
             )}
+            <div className="logo-container">
+                <img src={logo} alt="Soma Collective Logo" className="logo" />
+            </div>
             <div className="contact-button">
                 <a href={`mailto:${mail}`} className="contact-link">
                     Contact us

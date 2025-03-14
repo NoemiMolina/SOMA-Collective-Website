@@ -94,6 +94,28 @@
     color: white;
 }
 
+.logo-container {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 980;
+    width: 70%;
+    max-width: 250px;
+    height: fit-content;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent;
+}
+
+.logo {
+    height: 70px;
+    text-align: center;
+}
+
 
 @media (max-width: 768px) {
     .menu-button {
@@ -147,6 +169,10 @@
         border-radius: 5px;
         font-size: 1em;
         transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .logo {
+        height: 45px;
     }
 
 }
@@ -204,5 +230,11 @@
         font-size: 0.9em;
         transition: background-color 0.3s, color 0.3s, transform 0.3s;
     }
+
+    .logo {
+        height: 30px;
+        margin-right: 10%;
+    }
+
 }
 

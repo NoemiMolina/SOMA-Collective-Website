@@ -1,6 +1,5 @@
 import React from 'react';
 import './Home.css';
-import somalogo from '../../assets/somalogo/logo.svg';
 import { useNavigate } from 'react-router-dom';
 import presentation from '../../assets/images/presentation.jpg';
 
@@ -64,11 +63,6 @@ const Home = () => {
 
     return (
         <div className="page-container home">
-            <div className="page-container__section section--logo">
-                <div className="page-container__section__item home">
-                    <img src={somalogo} alt="Logo" />
-                </div>
-            </div>
             <div className="page-container__section section--presentation">
                 <div className="page-container__section__item presentation">
                     <img src={presentation} alt="Présentation"/>
