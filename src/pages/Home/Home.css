@@ -57,8 +57,8 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
   width: 800px;
   height: 700px;
-  object-fit: cover;
-  overflow: hidden;
+  object-fit: contain;
+  /* overflow: hidden; */
   border-radius: 10px;
 }
 
@@ -66,10 +66,10 @@
 .page-container__section__item.animPic.last-slice img {
   position: relative;
   margin-top: 5%;
-  width: 350px;
-  height: 350px;
+  max-width: 350px;
+  max-height: 350px;
   border-radius: 10px !important;
-  overflow: hidden;
+  object-fit: contain;
   padding-bottom: 5%;
 }
 
@@ -295,7 +295,7 @@
 
   .presentationEnd {
     padding-bottom: 10%;
- 
+
   }
 
   .page-container__section__item.animPic.home {
