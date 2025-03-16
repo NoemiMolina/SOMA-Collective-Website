@@ -208,6 +208,57 @@
   }
 }
 
+/* Media Queries pour iPad Air */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .louisDazyPresentation {
+    max-width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .artistSliderGallery {
+    margin-right: 7%;
+    padding-right: 15%;
+  }
+
+  .artistSliderGallery-wrapper {
+    margin-top: 18%;
+  }
+
+  .louisDazy-image {
+    max-width: 50%;
+  }
+
+  .photographer, .title-artist {
+    margin-left: 15%;
+  }
+}
+
+/* Media Queries pour iPad Pro */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .louisDazyPresentation {
+    max-width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .artistSliderGallery {
+    margin-right: 10%;
+    padding-right: 20%;
+  }
+
+  .artistSliderGallery-wrapper {
+    margin-top: 20%;
+  }
+
+  .louisDazy-image {
+    max-width: 40%;
+  }
+
+  .photographer, .title-artist {
+    margin-left: 20%;
+  }
+}
 @media (max-width: 480px) {
   .louisDazyPresentation {
     max-width: 90%; 

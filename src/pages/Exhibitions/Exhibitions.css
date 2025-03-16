@@ -77,11 +77,6 @@
     margin-right: 20%;
 }
 
-/* .animPic.exhibition img:hover {
-    transform: translateY(-10px);
-    opacity: 0.8;
-} */
-
 .animPic.exhibition.first-slice img {
     width: 500px;
     height: auto;
@@ -127,12 +122,6 @@
     border-radius: 10px;
     object-fit: contain;
 }
-
-/* .exhibitionSlide:hover img {
-    transform: translateY(-10px);
-    opacity: 0.8;
-    border-radius: 10px;
-} */
 
 .CollabTitle {
     margin-right: 5%;
