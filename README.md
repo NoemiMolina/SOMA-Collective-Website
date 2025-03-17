@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+🇬🇧 👇 :
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Photography Collective Website 'Soma Collective'**
 
-## Available Scripts
+**Overview**
 
-In the project directory, you can run:
+This project is a website created for a collective of photographers, including Louis Dazy, Lighton Art, Lukas, and Oelhan TV. It features six pages designed to showcase the artists and their work while providing easy navigation and contact options.
 
-### `npm start`
+**Features**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+*Home Page*: 
+Presents the collective's history and mission. When hovering over an image, the artwork title and artist name appear. Clicking on an image redirects to the corresponding artist's page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+*Artist Pages (4 pages)*: Each artist has a dedicated page with:
+- A presentation of their work.
+- Social media icons (Instagram, Twitter) and an email contact icon. Clicking on these icons redirects to the respective platform or opens the email client with the artist's email adress pre-filled.
+- An image slider showcasing the artist's work. When hovering over an image, its title appears.
 
-### `npm test`
+*Recent Events & Exhibitions Page*:
+- Displays past exhibitions of the collective.
+- Images of these events show the event name and date on hover.
+- A button allows users to download the press kit automatically.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*Header (Visible on all pages)*:
 
-### `npm run build`
+Includes a menu button, the collective's logo, and a 'Contact Us' button that opens an email client with the collective's email address pre-filled.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*Responsive Design*:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- On smaller screens, content is arranged in a column layout.
+- Image captions are displayed directly under images instead of appearing on hover.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Technologies Used**
 
-### `npm run eject`
+*- HTML*
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+*- CSS*
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*- ReactJS*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+*- TypeScript*
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+🇫🇷 👇 :
 
-## Learn More
+**Site Web du Collectif de Photographes 'Soma Collective'**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Aperçu**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Ce projet est un site web réalisé pour un collectif de photographes composé de Louis Dazy, Lighton Art, Lukas et Oelhan TV. Il comprend six pages permettant de présenter les artistes et leurs œuvres tout en facilitant la navigation et la prise de contact.
+
+**Fonctionnalités**
+
+*Page d'accueil* : Présente l'histoire et la mission du collectif. Lorsqu'une image est survolée, le titre de l'œuvre et le nom de l'artiste apparaissent. Un clic sur une image redirige vers la page de l'artiste correspondant.
+
+*Pages Artistes (4 pages)* : Chaque artiste a une page dédiée contenant :
+
+- Une présentation de son travail.
+- Des icônes de réseaux sociaux (Instagram, Twitter) et une icône d'email. Un clic sur ces icônes redirige vers la plateforme correspondante ou ouvre le client mail avec un message pré-rempli adressé à l'artiste.
+- Un slider d'images montrant les œuvres de l'artiste. Au survol d'une image, son titre apparaît.
+
+*Page "Événements récents et expositions"*:
+
+- Liste les expositions passées du collectif.
+- Affiche des images de ces événements avec le nom de l'événement et sa date au survol.
+- Un bouton permet de télécharger automatiquement le presskit sur la machine du client.
+
+*Header (visible sur toutes les pages)* :
+
+Contient un bouton de menu, le logo du collectif et un bouton "Contact Us" qui ouvre le client mail avec l'adresse du collectif pré-remplie.
+
+**Responsive Design** :
+
+- Sur mobile, le contenu est affiché sous forme de colonnes.
+- Les légendes des images sont affichées directement sous les images au lieu d'apparaître au survol.
+
+**Technologies Utilisées**:
+
+*- HTML*
+
+*- CSS*
+
+*- ReactJS*
+
+*- TypeScript*
