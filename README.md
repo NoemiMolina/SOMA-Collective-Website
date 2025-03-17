@@ -37,6 +37,7 @@ Includes a menu button, the collective's logo, and a 'Contact Us' button that op
 
 - On smaller screens, content is arranged in a column layout.
 - Image captions are displayed directly under images instead of appearing on hover (exemple below with an artist page).
+  
 ![image](https://github.com/user-attachments/assets/68b3e40d-0674-4fb0-91bb-fdb44d202aa1)
 ![image](https://github.com/user-attachments/assets/af065c8e-a3b0-4951-b51e-273d044094e1)
 
@@ -69,7 +70,7 @@ Ce projet est un site web réalisé pour un collectif de photographes composé d
 *Pages Artistes (4 pages)* : Chaque artiste a une page dédiée contenant :
 
 - Une présentation de son travail.
-- Des icônes de réseaux sociaux (Instagram, Twitter) et une icône d'email. Un clic sur ces icônes redirige vers la plateforme correspondante ou ouvre le client mail avec un message pré-rempli adressé à l'artiste.
+- Des icônes de réseaux sociaux (Instagram, Twitter) et une icône d'email. Un clic sur ces icônes redirige vers la plateforme correspondante ou ouvre la boîte mail du client avec l'adresse mail pré-remplie de l'artiste.
 - Un slider d'images montrant les œuvres de l'artiste. Au survol d'une image, son titre apparaît.
  ![image](https://github.com/user-attachments/assets/2354166d-3ae9-4c6d-81e2-cf2a93771c37)
 
