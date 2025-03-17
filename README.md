@@ -64,7 +64,7 @@ Ce projet est un site web réalisé pour un collectif de photographes composé d
 
 **Fonctionnalités**
 
-*Page d'accueil* : Présente l'histoire et la mission du collectif. Lorsqu'une image est survolée, le titre de l'œuvre et le nom de l'artiste apparaissent. Un clic sur une image redirige vers la page de l'artiste correspondant.
+*Page d'accueil* : Présente l'histoire et la mission du collectif. Lorsqu'une image est survolée, le titre de l'œuvre et le nom de l'artiste apparaissent. Un clic sur une image redirige vers la page de l'artiste correspondant. Les oeuvres des artistes sont représentées dans un slider dynamique scrollant à l'infini.
 ![image](https://github.com/user-attachments/assets/11006569-2125-4f35-a964-653b64f37914)
 
 *Pages Artistes (4 pages)* : Chaque artiste a une page dédiée contenant :
