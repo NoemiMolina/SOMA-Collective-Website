@@ -1,4 +1,4 @@
-# Soma Collective - Photography Collective Website
+# 🌟 Soma Collective - Photography Collective Website 📸
 
 ![React](https://img.shields.io/badge/React-18.2.0-blue?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue?style=for-the-badge&logo=typescript)
