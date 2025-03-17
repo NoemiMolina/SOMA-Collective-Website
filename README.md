@@ -1,5 +1,8 @@
 # Soma Collective - Photography Collective Website
 
+<details>
+<summary>🇬🇧 English Version</summary>
+
 ## 🌍 Overview
 
 **Soma Collective** is a photography collective composed of talented artists: **Louis Dazy, Lighton Art, Lukas, and Oelhan TV**. This website serves as a digital exhibition space for their work, featuring a sleek and intuitive design that enhances user experience.
@@ -53,9 +56,10 @@ Each artist has a dedicated page featuring:
 - **ReactJS**
 - **TypeScript**
 
----
+</details>
 
-# Soma Collective - Site Web du Collectif de Photographes
+<details>
+<summary>🇫🇷 Version Française</summary>
 
 ## 🌍 Aperçu
 
@@ -109,4 +113,6 @@ Chaque artiste dispose d’une page dédiée contenant :
 - **CSS**
 - **ReactJS**
 - **TypeScript**
+
+</details>
 
